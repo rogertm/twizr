@@ -1,8 +1,8 @@
 {
-	"name": "rogertm/twenty-em-child",
+	"name": "rogertm/twizr",
 	"description": "Twenty'em Child Theme",
 	"keywords": ["wordpress", "framework", "child-theme", "theme-framework", "theme-development", "wordpress-framework"],
-	"homepage": "https://github.com/rogertm/twenty-em-child",
+	"homepage": "https://github.com/rogertm/twizr",
 	"license": "GPL-2.0-or-later",
 	"minimum-stability": "stable",
 	"type": "wordpress-theme",
@@ -21,8 +21,8 @@
 	],
 	"support": {
 		"email": "roger213tm@gmail.com",
-		"issues": "https://github.com/rogertm/twenty-em-child/issues",
-		"source": "https://github.com/rogertm/twenty-em-child",
+		"issues": "https://github.com/rogertm/twizr/issues",
+		"source": "https://github.com/rogertm/twizr",
 		"docs": "https://themingisprose.com/twenty-em/documentacion/"
 	}
 }
