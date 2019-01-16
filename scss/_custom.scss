@@ -1,4 +1,13 @@
-// Twenty'em Child custom variables
+// Twizr custom variables
 
 // Your variable overrides
 $icomoon-font-path: 		"../../twenty-em/node_modules/@themingisprose/icon-pack/fonts";
+
+// Grid containers
+$container-max-widths: (
+	xxl: 1600px
+);
+
+// Fonts
+$font-family-sans-serif:	"Lato", Helvetica, Arial, sans-serif;
+$heading-font-family:		"Roboto Condensed", Helvetica, Arial, sans-serif;

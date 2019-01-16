@@ -1,0 +1,48 @@
+/**
+ * Twizr
+ *
+ * @package			WordPress
+ * @subpackage		Twizr
+ * @author			RogerTM
+ * @license			license.txt
+ * @link			https://themingisprose.com/twenty-em
+ * @since 			Twizr 1.0
+ */
+#t-em-all-features-ads,
+#t-em-all-funs-ads{
+	display: block;
+	overflow: hidden;
+}
+#t-em-all-features-ads .text-option,
+#t-em-all-funs-ads .text-option{
+	padding-right: 15px;
+}
+#t-em-all-features-ads .option-group,
+#t-em-all-funs-ads .option-group{
+	width: 25%;
+	display: inline-block;
+	float: left;
+	clear: unset !important;
+}
+#t-em-all-features-ads .regular-text,
+#t-em-all-funs-ads .regular-text{
+	width: 99%;
+}
+
+#t-em-setting .text-option.custom-pages{
+	border-bottom: 1px solid #dfdfdf;
+	padding: 10px;
+	margin-bottom: 3px;
+}
+#t-em-setting .row-action {
+	color: #ddd;
+	font-size: 13px;
+	padding: 2px 0px 0px;
+	visibility: hidden;
+}
+#t-em-setting .row-action span{
+	display: inline !important;
+}
+#t-em-setting .text-option.custom-pages:hover .row-action{
+	visibility: visible;
+}

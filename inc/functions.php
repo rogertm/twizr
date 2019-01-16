@@ -11,11 +11,13 @@
  */
 
 /**
- * Twizr files
+ * Twizr Setup
  *
  * @since Twizr 1.0
  */
-require( get_stylesheet_directory() . '/admin/index.php' );
-require( get_stylesheet_directory() . '/inc/index.php' );
-require( get_stylesheet_directory() . '/docs/index.php' );
+function twizr_setup(){
+	// Make Twizr available for translation.
+	load_child_theme_textdomain( 'twizr', get_stylesheet_directory() . '/languages' );
+}
+add_action( 'after_setup_theme', 'twizr_setup' );
 ?>

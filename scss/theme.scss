@@ -1,7 +1,85 @@
-// Twenty'em Child scss source file
+// Twizr scss source file
 
 //
 // Imports
 //
 @import "custom";
 @import "../../twenty-em/scss/theme";
+
+//
+// Scaffolding
+//
+body{
+	font:{
+		size: 20px;
+	}
+}
+
+//
+// Navigation
+//
+#top-menu{
+	@extend .fixed-top;
+	.admin-bar &{
+		top: 30px;
+	}
+}
+
+//
+// Header
+//
+#static-header{
+	@extend .d-flex;
+	@extend .align-items-center;
+	@extend .text-center;
+	.hero{
+		&-heading{
+			@extend .display-4;
+			@extend .font-weight-bold;
+		}
+		&-body{
+			p{
+				@extend .lead;
+			}
+		}
+		&-footer{
+			.btn{
+				@extend .btn-lg;
+			}
+		}
+	}
+}
+
+//
+// Front Page
+//
+.jumbo-widget{
+	&.jumbotron{
+		@extend .bg-transparent;
+		@extend .text-center;
+		@extend .col-lg-8;
+		@extend .mx-auto;
+		.jumbo-widget-heading{
+			@extend .display-1;
+			@extend .font-weight-bold;
+		}
+		.jumbo-widget-content{
+			p{
+				@extend .h3;
+				@extend .font-weight-light;
+			}
+		}
+	}
+	&-heading{
+		[class^="icomoon-"]{
+			@extend .d-block;
+			@extend .h1;
+			@extend .text-primary;
+		}
+	}
+	&-content{
+		p{
+			@extend .lead;
+		}
+	}
+}

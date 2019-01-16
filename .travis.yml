@@ -1,7 +1,7 @@
-# Travis CI (MIT License) configuration file for the Twenty'em Child Theme.
+# Travis CI (MIT License) configuration file for the Twizr Theme.
 # @link https://travis-ci.org/
 
-# For use with the Twenty'em Child Theme.
+# For use with the Twizr Theme.
 # @link https://github.com/rogertm/twizr
 
 # Ditch sudo and use containers.
