@@ -23,6 +23,12 @@ body{
 	.admin-bar &{
 		top: 30px;
 	}
+	.navbar{
+		&-nav{
+			@extend .ml-auto;
+			@extend .small;
+		}
+	}
 }
 
 //
@@ -32,19 +38,23 @@ body{
 	@extend .d-flex;
 	@extend .align-items-center;
 	@extend .text-center;
+	@include gradient-directional($child-info, $child-primary);
 	.hero{
 		&-heading{
 			@extend .display-4;
 			@extend .font-weight-bold;
+			@extend .text-light;
 		}
 		&-body{
 			p{
 				@extend .lead;
+				@extend .text-light;
 			}
 		}
 		&-footer{
 			.btn{
 				@extend .btn-lg;
+				@extend .btn-outline-light;
 			}
 		}
 	}
@@ -53,12 +63,16 @@ body{
 //
 // Front Page
 //
+.template-jumbotron{
+	@extend .mb-5;
+}
 .jumbo-widget{
 	&.jumbotron{
 		@extend .bg-transparent;
 		@extend .text-center;
 		@extend .col-lg-8;
 		@extend .mx-auto;
+		@extend .border-bottom;
 		.jumbo-widget-heading{
 			@extend .display-1;
 			@extend .font-weight-bold;
@@ -74,12 +88,39 @@ body{
 		[class^="icomoon-"]{
 			@extend .d-block;
 			@extend .h1;
-			@extend .text-primary;
+			@extend .text-child-primary;
 		}
 	}
 	&-content{
 		p{
 			@extend .lead;
 		}
+	}
+	&-footer{
+		.btn{
+			@extend .btn-outline-child-primary;
+		}
+	}
+}
+
+//
+// Content
+//
+.entry{
+	&-title{
+		@extend .display-4;
+	}
+}
+
+//
+// Footer
+//
+#footer{
+	.site-info{
+		@extend .bg-light;
+		@extend .small;
+	}
+	#twenty-em-credit{
+		@extend .text-left;
 	}
 }

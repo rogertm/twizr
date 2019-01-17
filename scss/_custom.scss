@@ -11,3 +11,34 @@ $container-max-widths: (
 // Fonts
 $font-family-sans-serif:	"Lato", Helvetica, Arial, sans-serif;
 $heading-font-family:		"Roboto Condensed", Helvetica, Arial, sans-serif;
+
+// Colors
+$child-red:					#F44336 !default;
+$child-pink:				#E91E63 !default;
+$child-purple:				#9C27B0 !default;
+$child-deep-purple:			#673AB7 !default;
+$child-indigo:				#3F51B5 !default;
+/**	*/
+$child-primary:				#3F51B5 !default;
+$child-success:				#CDDC39 !default;
+$child-danger:				#F44336 !default;
+$child-warning:				#FF9800 !default;
+$child-info:				#2196F3 !default;
+$child-gray:				#9E9E9E !default;
+$theme-colors: (
+	"child-red":			$child-red,
+	"child-pink":			$child-pink,
+	"child-purple":			$child-purple,
+	"child-deep-purple":	$child-deep-purple,
+	"child-indigo": 		$child-indigo,
+	"child-primary": 		$child-primary,
+	"child-success": 		$child-success,
+	"child-danger": 		$child-danger,
+	"child-warning": 		$child-warning,
+	"child-info": 			$child-info,
+	"child-gray":			$child-gray
+);
+
+// Links
+$link-color:				$child-primary;
+$link-hover-decoration:		none;
