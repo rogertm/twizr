@@ -10,7 +10,7 @@
  */
 jQuery(document).ready(function($) {
 	// Top Menu
-	function clubtwins_top_menu(){
+	function twizerTopMenu(){
 		var menu = $('#top-menu .navbar')
 			h 	 = $('#top-menu').outerHeight();
 		$(window).scroll(function(){
@@ -23,7 +23,7 @@ jQuery(document).ready(function($) {
 			}
 		});
 	};
-	clubtwins_top_menu();
+	twizerTopMenu();
 
 	// Hide header on scroll down, show on scroll up
 	// http://jsfiddle.net/mariusc23/s6mLJ/31/
@@ -99,6 +99,7 @@ jQuery(document).ready(function($) {
 
 	// Run function on resize
 	$(window).resize(function(){
+		twizerTopMenu();
 		twizrMenuScroll( $('#top-menu'), $('#header').outerHeight() );
 	});
 });
