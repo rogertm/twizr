@@ -16,17 +16,48 @@ body{
 }
 
 //
+// Brand
+//
+#site-title{
+	font-size: inherit !important;
+}
+
+//
 // Navigation
 //
 #top-menu{
-	@extend .fixed-top;
 	.admin-bar &{
 		top: 30px;
 	}
+	@extend .fixed-top;
 	.navbar{
+		@extend .bg-transparent;
+		border-bottom: 1px solid rgba( $white, .3 );
+		*{
+			@extend .font-weight-bold;
+			@extend .text-white;
+			font-family: $headings-font-family;
+		}
+		&.nav-transparent{
+			transition: 500ms;
+			@extend .bg-transparent;
+		}
+		&.nav-primary{
+			transition: 250ms;
+			background-color: rgba( $white, .9 ) !important;
+			@extend .navbar-light;
+			@extend .shadow;
+			*{
+				@extend .text-child-deep-purple;
+			}
+		}
 		&-nav{
 			@extend .ml-auto;
 			@extend .small;
+		}
+		&-brand{
+			@extend .h1;
+			@extend .m-0;
 		}
 	}
 }
@@ -38,12 +69,19 @@ body{
 	@extend .d-flex;
 	@extend .align-items-center;
 	@extend .text-center;
-	@include gradient-directional($child-info, $child-primary);
+	@include gradient-directional($child-deep-purple, $child-indigo);
+	min-height: 100vh;
+	&.jumbotron{
+		@extend .rounded-0;
+	}
 	.hero{
 		&-heading{
 			@extend .display-4;
 			@extend .font-weight-bold;
 			@extend .text-light;
+		}
+		&-thumbnail{
+			@extend .shadow-lg;
 		}
 		&-body{
 			p{
@@ -52,9 +90,13 @@ body{
 			}
 		}
 		&-footer{
+			@extend .d-flex;
+			@extend .mt-5;
 			.btn{
+				@extend .flex-fill;
 				@extend .btn-lg;
 				@extend .btn-outline-light;
+				@extend .mx-3;
 			}
 		}
 	}
@@ -64,10 +106,15 @@ body{
 // Front Page
 //
 .template-jumbotron{
+	min-height: 100vh;
 	@extend .mb-5;
+	@extend .d-flex;
+	@extend .align-items-center;
 }
 .jumbo-widget{
+	@extend .px-4;
 	&.jumbotron{
+		@extend .rounded-0;
 		@extend .bg-transparent;
 		@extend .text-center;
 		@extend .col-lg-8;
@@ -82,23 +129,72 @@ body{
 				@extend .h3;
 				@extend .font-weight-light;
 			}
+			&:after{
+				@extend .border-0;
+			}
 		}
 	}
 	&-heading{
 		[class^="icomoon-"]{
 			@extend .d-block;
 			@extend .h1;
-			@extend .text-child-primary;
+			@extend .text-child-deep-purple;
 		}
 	}
 	&-content{
+		@extend .pb-4;
+		@extend .position-relative;
+		&:after{
+			@extend .position-absolute;
+			content: "";
+			left: 0;
+			right: 75%;
+			bottom: 0;
+			@extend .border-bottom;
+		}
 		p{
 			@extend .lead;
 		}
 	}
 	&-footer{
+		@extend .mt-5;
 		.btn{
-			@extend .btn-outline-child-primary;
+			@extend .btn-outline-child-deep-purple;
+		}
+	}
+}
+
+//
+// Call Action
+//
+#call_action{
+	&_one{
+		min-height: 50vh;
+		@extend .pb-5;
+		@extend .mb-0;
+		@extend .d-flex;
+		@extend .align-items-center;
+		@include gradient-directional($child-deep-purple, $child-indigo);
+		.call-action{
+			&-wrapper{
+				@extend .pb-5;
+				@extend .container;
+				@extend .text-center;
+			}
+			&-headline{
+				@extend .display-4;
+			}
+			&-body{
+				@extend .mt-3;
+				@extend .lead;
+			}
+			&-footer{
+				@extend .mt-5;
+				.btn{
+					@extend .btn-lg;
+					@extend .btn-outline-light;
+				}
+			}
 		}
 	}
 }
@@ -115,12 +211,19 @@ body{
 //
 // Footer
 //
-#footer{
-	.site-info{
-		@extend .bg-light;
-		@extend .small;
+#colophon{
+	background:{
+		color: $gray-900;
 	}
-	#twenty-em-credit{
-		@extend .text-left;
+	*{ @extend .text-light; }
+}
+.site-info{
+	@extend .small;
+	*{ @extend .text-light; }
+	background:{
+		color: darken($gray-800, 5%);
 	}
+}
+#twenty-em-credit{
+	@extend .text-left;
 }

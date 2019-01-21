@@ -9,14 +9,21 @@
  * @since 			Twizr 1.0
  */
 jQuery(document).ready(function($) {
-	// Hero Full Screen
-	function twizrFullscreenHero(){
-		$('.home #static-header').css({
-			width: $(window).width(),
-			height: $(window).height(),
+	// Top Menu
+	function clubtwins_top_menu(){
+		var menu = $('#top-menu .navbar')
+			h 	 = $('#top-menu').outerHeight();
+		$(window).scroll(function(){
+			if ($('body,html').scrollTop() > Number(h)){
+				$(menu).addClass('nav-primary');
+				$(menu).removeClass('nav-transparent');
+			}else{
+				$(menu).removeClass('nav-primary');
+				$(menu).addClass('nav-transparent');
+			}
 		});
-	}
-	twizrFullscreenHero();
+	};
+	clubtwins_top_menu();
 
 	// Hide header on scroll down, show on scroll up
 	// http://jsfiddle.net/mariusc23/s6mLJ/31/
@@ -92,7 +99,6 @@ jQuery(document).ready(function($) {
 
 	// Run function on resize
 	$(window).resize(function(){
-		twizrFullscreenHero();
 		twizrMenuScroll( $('#top-menu'), $('#header').outerHeight() );
 	});
 });

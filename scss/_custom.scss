@@ -18,6 +18,9 @@ $child-pink:				#E91E63 !default;
 $child-purple:				#9C27B0 !default;
 $child-deep-purple:			#673AB7 !default;
 $child-indigo:				#3F51B5 !default;
+$child-green:				#4CAF50 !default;
+$child-orange:				#FF9800 !default;
+$child-deep-orange:			#FF5722 !default;
 /**	*/
 $child-primary:				#3F51B5 !default;
 $child-success:				#CDDC39 !default;
@@ -31,6 +34,9 @@ $theme-colors: (
 	"child-purple":			$child-purple,
 	"child-deep-purple":	$child-deep-purple,
 	"child-indigo": 		$child-indigo,
+	"child-green": 			$child-green,
+	"child-orange":			$child-orange,
+	"child-deep-orange":	$child-deep-orange,
 	"child-primary": 		$child-primary,
 	"child-success": 		$child-success,
 	"child-danger": 		$child-danger,

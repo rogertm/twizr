@@ -32,6 +32,9 @@
   --child-purple: #9C27B0;
   --child-deep-purple: #673AB7;
   --child-indigo: #3F51B5;
+  --child-green: #4CAF50;
+  --child-orange: #FF9800;
+  --child-deep-orange: #FF5722;
   --child-primary: #3F51B5;
   --child-success: #CDDC39;
   --child-danger: #F44336;
@@ -310,6 +313,7 @@ template {
 
 h1, h2, h3, h4, h5, h6,
 .h1,
+#top-menu .navbar-brand,
 .jumbo-widget-heading [class^="icomoon-"], .h2, .h3, .jumbo-widget.jumbotron .jumbo-widget-content p, .jumbo-widget#maintenance-mode .jumbo-widget-content p, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
@@ -317,7 +321,7 @@ h1, h2, h3, h4, h5, h6,
   line-height: 1.2;
   color: inherit; }
 
-h1, .h1, .jumbo-widget-heading [class^="icomoon-"] {
+h1, .h1, #top-menu .navbar-brand, .jumbo-widget-heading [class^="icomoon-"] {
   font-size: 2.5rem; }
 
 h2, .h2 {
@@ -335,7 +339,7 @@ h5, .h5 {
 h6, .h6 {
   font-size: 1rem; }
 
-.lead, article .entry-excerpt, .featured-header-template .entry-content, #maintenance-mode #countdowntimer .timerDisplay, #static-header .hero-body p, .jumbo-widget-content p {
+.lead, article .entry-excerpt, .featured-header-template .entry-content, #maintenance-mode #countdowntimer .timerDisplay, #static-header .hero-body p, .jumbo-widget-content p, #call_action_one .call-action-body {
   font-size: 1.25rem;
   font-weight: 300; }
 
@@ -354,7 +358,7 @@ h6, .h6 {
   font-weight: 300;
   line-height: 1.2; }
 
-.display-4, #static-header .hero-heading, .entry-title {
+.display-4, #static-header .hero-heading, #call_action_one .call-action-headline, .entry-title {
   font-size: 3.5rem;
   font-weight: 300;
   line-height: 1.2; }
@@ -369,7 +373,7 @@ small,
 .small,
 #maintenance-mode #countdowntimer .periodDisplay,
 #top-menu .navbar-nav,
-#footer .site-info {
+.site-info {
   font-size: 80%;
   font-weight: 400; }
 
@@ -460,7 +464,7 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.container {
+.container, #call_action_one .call-action-wrapper {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -1379,6 +1383,39 @@ pre {
   .table-hover .table-child-indigo:hover > th {
     background-color: #b7bde3; }
 
+.table-child-green,
+.table-child-green > th,
+.table-child-green > td {
+  background-color: #cde9ce; }
+
+.table-hover .table-child-green:hover {
+  background-color: #bbe1bd; }
+  .table-hover .table-child-green:hover > td,
+  .table-hover .table-child-green:hover > th {
+    background-color: #bbe1bd; }
+
+.table-child-orange,
+.table-child-orange > th,
+.table-child-orange > td {
+  background-color: #ffe2b8; }
+
+.table-hover .table-child-orange:hover {
+  background-color: #ffd89f; }
+  .table-hover .table-child-orange:hover > td,
+  .table-hover .table-child-orange:hover > th {
+    background-color: #ffd89f; }
+
+.table-child-deep-orange,
+.table-child-deep-orange > th,
+.table-child-deep-orange > td {
+  background-color: #ffd0c1; }
+
+.table-hover .table-child-deep-orange:hover {
+  background-color: #ffbda8; }
+  .table-hover .table-child-deep-orange:hover > td,
+  .table-hover .table-child-deep-orange:hover > th {
+    background-color: #ffbda8; }
+
 .table-child-primary,
 .table-child-primary > th,
 .table-child-primary > td {
@@ -2175,6 +2212,69 @@ fieldset:disabled #comments a#cancel-comment-reply-link,
     .btn-child-indigo:not(:disabled):not(.disabled):active:focus, .btn-child-indigo:not(:disabled):not(.disabled).active:focus, .show > .btn-child-indigo.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(63, 81, 181, 0.5); }
 
+.btn-child-green {
+  color: #fff;
+  background-color: #4CAF50;
+  border-color: #4CAF50; }
+  .btn-child-green:hover {
+    color: #fff;
+    background-color: #409444;
+    border-color: #3d8b40; }
+  .btn-child-green:focus, .btn-child-green.focus {
+    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.5); }
+  .btn-child-green.disabled, .btn-child-green:disabled {
+    color: #fff;
+    background-color: #4CAF50;
+    border-color: #4CAF50; }
+  .btn-child-green:not(:disabled):not(.disabled):active, .btn-child-green:not(:disabled):not(.disabled).active, .show > .btn-child-green.dropdown-toggle {
+    color: #fff;
+    background-color: #3d8b40;
+    border-color: #39833c; }
+    .btn-child-green:not(:disabled):not(.disabled):active:focus, .btn-child-green:not(:disabled):not(.disabled).active:focus, .show > .btn-child-green.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.5); }
+
+.btn-child-orange {
+  color: #212529;
+  background-color: #FF9800;
+  border-color: #FF9800; }
+  .btn-child-orange:hover {
+    color: #fff;
+    background-color: #d98100;
+    border-color: #cc7a00; }
+  .btn-child-orange:focus, .btn-child-orange.focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 152, 0, 0.5); }
+  .btn-child-orange.disabled, .btn-child-orange:disabled {
+    color: #212529;
+    background-color: #FF9800;
+    border-color: #FF9800; }
+  .btn-child-orange:not(:disabled):not(.disabled):active, .btn-child-orange:not(:disabled):not(.disabled).active, .show > .btn-child-orange.dropdown-toggle {
+    color: #fff;
+    background-color: #cc7a00;
+    border-color: #bf7200; }
+    .btn-child-orange:not(:disabled):not(.disabled):active:focus, .btn-child-orange:not(:disabled):not(.disabled).active:focus, .show > .btn-child-orange.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(255, 152, 0, 0.5); }
+
+.btn-child-deep-orange {
+  color: #fff;
+  background-color: #FF5722;
+  border-color: #FF5722; }
+  .btn-child-deep-orange:hover {
+    color: #fff;
+    background-color: #fb3c00;
+    border-color: #ee3900; }
+  .btn-child-deep-orange:focus, .btn-child-deep-orange.focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 87, 34, 0.5); }
+  .btn-child-deep-orange.disabled, .btn-child-deep-orange:disabled {
+    color: #fff;
+    background-color: #FF5722;
+    border-color: #FF5722; }
+  .btn-child-deep-orange:not(:disabled):not(.disabled):active, .btn-child-deep-orange:not(:disabled):not(.disabled).active, .show > .btn-child-deep-orange.dropdown-toggle {
+    color: #fff;
+    background-color: #ee3900;
+    border-color: #e13600; }
+    .btn-child-deep-orange:not(:disabled):not(.disabled):active:focus, .btn-child-deep-orange:not(:disabled):not(.disabled).active:focus, .show > .btn-child-deep-orange.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(255, 87, 34, 0.5); }
+
 .btn-child-primary {
   color: #fff;
   background-color: #3F51B5;
@@ -2441,47 +2541,71 @@ fieldset:disabled #comments a#cancel-comment-reply-link,
 
 .btn-outline-light, #static-header .hero-footer .btn, #static-header .hero-footer #commentform .submit, #commentform #static-header .hero-footer .submit, #static-header .hero-footer #comments .comment-reply-link, #comments #static-header .hero-footer .comment-reply-link,
 #static-header .hero-footer #comments #cancel-comment-reply-link,
-#comments #static-header .hero-footer #cancel-comment-reply-link {
+#comments #static-header .hero-footer #cancel-comment-reply-link, #call_action_one .call-action-footer .btn, #call_action_one .call-action-footer #commentform .submit, #commentform #call_action_one .call-action-footer .submit, #call_action_one .call-action-footer #comments .comment-reply-link, #comments #call_action_one .call-action-footer .comment-reply-link,
+#call_action_one .call-action-footer #comments #cancel-comment-reply-link,
+#comments #call_action_one .call-action-footer #cancel-comment-reply-link {
   color: #f8f9fa;
   background-color: transparent;
   background-image: none;
   border-color: #f8f9fa; }
   .btn-outline-light:hover, #static-header .hero-footer .btn:hover, #static-header .hero-footer #commentform .submit:hover, #commentform #static-header .hero-footer .submit:hover, #static-header .hero-footer #comments .comment-reply-link:hover, #comments #static-header .hero-footer .comment-reply-link:hover,
   #static-header .hero-footer #comments #cancel-comment-reply-link:hover,
-  #comments #static-header .hero-footer #cancel-comment-reply-link:hover {
+  #comments #static-header .hero-footer #cancel-comment-reply-link:hover, #call_action_one .call-action-footer .btn:hover, #call_action_one .call-action-footer #commentform .submit:hover, #commentform #call_action_one .call-action-footer .submit:hover, #call_action_one .call-action-footer #comments .comment-reply-link:hover, #comments #call_action_one .call-action-footer .comment-reply-link:hover,
+  #call_action_one .call-action-footer #comments #cancel-comment-reply-link:hover,
+  #comments #call_action_one .call-action-footer #cancel-comment-reply-link:hover {
     color: #212529;
     background-color: #f8f9fa;
     border-color: #f8f9fa; }
   .btn-outline-light:focus, #static-header .hero-footer .btn:focus, #static-header .hero-footer #commentform .submit:focus, #commentform #static-header .hero-footer .submit:focus, #static-header .hero-footer #comments .comment-reply-link:focus, #comments #static-header .hero-footer .comment-reply-link:focus,
   #static-header .hero-footer #comments #cancel-comment-reply-link:focus,
-  #comments #static-header .hero-footer #cancel-comment-reply-link:focus, .btn-outline-light.focus, #static-header .hero-footer .focus.btn, #static-header .hero-footer #commentform .focus.submit, #commentform #static-header .hero-footer .focus.submit, #static-header .hero-footer #comments .focus.comment-reply-link, #comments #static-header .hero-footer .focus.comment-reply-link,
+  #comments #static-header .hero-footer #cancel-comment-reply-link:focus, #call_action_one .call-action-footer .btn:focus, #call_action_one .call-action-footer #commentform .submit:focus, #commentform #call_action_one .call-action-footer .submit:focus, #call_action_one .call-action-footer #comments .comment-reply-link:focus, #comments #call_action_one .call-action-footer .comment-reply-link:focus,
+  #call_action_one .call-action-footer #comments #cancel-comment-reply-link:focus,
+  #comments #call_action_one .call-action-footer #cancel-comment-reply-link:focus, .btn-outline-light.focus, #static-header .hero-footer .focus.btn, #static-header .hero-footer #commentform .focus.submit, #commentform #static-header .hero-footer .focus.submit, #static-header .hero-footer #comments .focus.comment-reply-link, #comments #static-header .hero-footer .focus.comment-reply-link,
   #static-header .hero-footer #comments .focus#cancel-comment-reply-link,
-  #comments #static-header .hero-footer .focus#cancel-comment-reply-link {
+  #comments #static-header .hero-footer .focus#cancel-comment-reply-link, #call_action_one .call-action-footer .focus.btn, #call_action_one .call-action-footer #commentform .focus.submit, #commentform #call_action_one .call-action-footer .focus.submit, #call_action_one .call-action-footer #comments .focus.comment-reply-link, #comments #call_action_one .call-action-footer .focus.comment-reply-link,
+  #call_action_one .call-action-footer #comments .focus#cancel-comment-reply-link,
+  #comments #call_action_one .call-action-footer .focus#cancel-comment-reply-link {
     box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5); }
   .btn-outline-light.disabled, #static-header .hero-footer .disabled.btn, #static-header .hero-footer #commentform .disabled.submit, #commentform #static-header .hero-footer .disabled.submit, #static-header .hero-footer #comments .disabled.comment-reply-link, #comments #static-header .hero-footer .disabled.comment-reply-link,
   #static-header .hero-footer #comments .disabled#cancel-comment-reply-link,
-  #comments #static-header .hero-footer .disabled#cancel-comment-reply-link, .btn-outline-light:disabled, #static-header .hero-footer .btn:disabled, #static-header .hero-footer #commentform .submit:disabled, #commentform #static-header .hero-footer .submit:disabled, #static-header .hero-footer #comments .comment-reply-link:disabled, #comments #static-header .hero-footer .comment-reply-link:disabled,
+  #comments #static-header .hero-footer .disabled#cancel-comment-reply-link, #call_action_one .call-action-footer .disabled.btn, #call_action_one .call-action-footer #commentform .disabled.submit, #commentform #call_action_one .call-action-footer .disabled.submit, #call_action_one .call-action-footer #comments .disabled.comment-reply-link, #comments #call_action_one .call-action-footer .disabled.comment-reply-link,
+  #call_action_one .call-action-footer #comments .disabled#cancel-comment-reply-link,
+  #comments #call_action_one .call-action-footer .disabled#cancel-comment-reply-link, .btn-outline-light:disabled, #static-header .hero-footer .btn:disabled, #static-header .hero-footer #commentform .submit:disabled, #commentform #static-header .hero-footer .submit:disabled, #static-header .hero-footer #comments .comment-reply-link:disabled, #comments #static-header .hero-footer .comment-reply-link:disabled,
   #static-header .hero-footer #comments #cancel-comment-reply-link:disabled,
-  #comments #static-header .hero-footer #cancel-comment-reply-link:disabled {
+  #comments #static-header .hero-footer #cancel-comment-reply-link:disabled, #call_action_one .call-action-footer .btn:disabled, #call_action_one .call-action-footer #commentform .submit:disabled, #commentform #call_action_one .call-action-footer .submit:disabled, #call_action_one .call-action-footer #comments .comment-reply-link:disabled, #comments #call_action_one .call-action-footer .comment-reply-link:disabled,
+  #call_action_one .call-action-footer #comments #cancel-comment-reply-link:disabled,
+  #comments #call_action_one .call-action-footer #cancel-comment-reply-link:disabled {
     color: #f8f9fa;
     background-color: transparent; }
   .btn-outline-light:not(:disabled):not(.disabled):active, #static-header .hero-footer .btn:not(:disabled):not(.disabled):active, #static-header .hero-footer #commentform .submit:not(:disabled):not(.disabled):active, #commentform #static-header .hero-footer .submit:not(:disabled):not(.disabled):active, #static-header .hero-footer #comments .comment-reply-link:not(:disabled):not(.disabled):active, #comments #static-header .hero-footer .comment-reply-link:not(:disabled):not(.disabled):active,
   #static-header .hero-footer #comments #cancel-comment-reply-link:not(:disabled):not(.disabled):active,
-  #comments #static-header .hero-footer #cancel-comment-reply-link:not(:disabled):not(.disabled):active, .btn-outline-light:not(:disabled):not(.disabled).active, #static-header .hero-footer .btn:not(:disabled):not(.disabled).active, #static-header .hero-footer #commentform .submit:not(:disabled):not(.disabled).active, #commentform #static-header .hero-footer .submit:not(:disabled):not(.disabled).active, #static-header .hero-footer #comments .comment-reply-link:not(:disabled):not(.disabled).active, #comments #static-header .hero-footer .comment-reply-link:not(:disabled):not(.disabled).active,
+  #comments #static-header .hero-footer #cancel-comment-reply-link:not(:disabled):not(.disabled):active, #call_action_one .call-action-footer .btn:not(:disabled):not(.disabled):active, #call_action_one .call-action-footer #commentform .submit:not(:disabled):not(.disabled):active, #commentform #call_action_one .call-action-footer .submit:not(:disabled):not(.disabled):active, #call_action_one .call-action-footer #comments .comment-reply-link:not(:disabled):not(.disabled):active, #comments #call_action_one .call-action-footer .comment-reply-link:not(:disabled):not(.disabled):active,
+  #call_action_one .call-action-footer #comments #cancel-comment-reply-link:not(:disabled):not(.disabled):active,
+  #comments #call_action_one .call-action-footer #cancel-comment-reply-link:not(:disabled):not(.disabled):active, .btn-outline-light:not(:disabled):not(.disabled).active, #static-header .hero-footer .btn:not(:disabled):not(.disabled).active, #static-header .hero-footer #commentform .submit:not(:disabled):not(.disabled).active, #commentform #static-header .hero-footer .submit:not(:disabled):not(.disabled).active, #static-header .hero-footer #comments .comment-reply-link:not(:disabled):not(.disabled).active, #comments #static-header .hero-footer .comment-reply-link:not(:disabled):not(.disabled).active,
   #static-header .hero-footer #comments #cancel-comment-reply-link:not(:disabled):not(.disabled).active,
-  #comments #static-header .hero-footer #cancel-comment-reply-link:not(:disabled):not(.disabled).active, .show > .btn-outline-light.dropdown-toggle, #static-header .hero-footer .show > .dropdown-toggle.btn, #static-header .hero-footer #commentform .show > .dropdown-toggle.submit, #commentform #static-header .hero-footer .show > .dropdown-toggle.submit, #static-header .hero-footer #comments .show > .dropdown-toggle.comment-reply-link, #comments #static-header .hero-footer .show > .dropdown-toggle.comment-reply-link,
+  #comments #static-header .hero-footer #cancel-comment-reply-link:not(:disabled):not(.disabled).active, #call_action_one .call-action-footer .btn:not(:disabled):not(.disabled).active, #call_action_one .call-action-footer #commentform .submit:not(:disabled):not(.disabled).active, #commentform #call_action_one .call-action-footer .submit:not(:disabled):not(.disabled).active, #call_action_one .call-action-footer #comments .comment-reply-link:not(:disabled):not(.disabled).active, #comments #call_action_one .call-action-footer .comment-reply-link:not(:disabled):not(.disabled).active,
+  #call_action_one .call-action-footer #comments #cancel-comment-reply-link:not(:disabled):not(.disabled).active,
+  #comments #call_action_one .call-action-footer #cancel-comment-reply-link:not(:disabled):not(.disabled).active, .show > .btn-outline-light.dropdown-toggle, #static-header .hero-footer .show > .dropdown-toggle.btn, #static-header .hero-footer #commentform .show > .dropdown-toggle.submit, #commentform #static-header .hero-footer .show > .dropdown-toggle.submit, #static-header .hero-footer #comments .show > .dropdown-toggle.comment-reply-link, #comments #static-header .hero-footer .show > .dropdown-toggle.comment-reply-link,
   #static-header .hero-footer #comments .show > .dropdown-toggle#cancel-comment-reply-link,
-  #comments #static-header .hero-footer .show > .dropdown-toggle#cancel-comment-reply-link {
+  #comments #static-header .hero-footer .show > .dropdown-toggle#cancel-comment-reply-link, #call_action_one .call-action-footer .show > .dropdown-toggle.btn, #call_action_one .call-action-footer #commentform .show > .dropdown-toggle.submit, #commentform #call_action_one .call-action-footer .show > .dropdown-toggle.submit, #call_action_one .call-action-footer #comments .show > .dropdown-toggle.comment-reply-link, #comments #call_action_one .call-action-footer .show > .dropdown-toggle.comment-reply-link,
+  #call_action_one .call-action-footer #comments .show > .dropdown-toggle#cancel-comment-reply-link,
+  #comments #call_action_one .call-action-footer .show > .dropdown-toggle#cancel-comment-reply-link {
     color: #212529;
     background-color: #f8f9fa;
     border-color: #f8f9fa; }
     .btn-outline-light:not(:disabled):not(.disabled):active:focus, #static-header .hero-footer .btn:not(:disabled):not(.disabled):active:focus, #static-header .hero-footer #commentform .submit:not(:disabled):not(.disabled):active:focus, #commentform #static-header .hero-footer .submit:not(:disabled):not(.disabled):active:focus, #static-header .hero-footer #comments .comment-reply-link:not(:disabled):not(.disabled):active:focus, #comments #static-header .hero-footer .comment-reply-link:not(:disabled):not(.disabled):active:focus,
     #static-header .hero-footer #comments #cancel-comment-reply-link:not(:disabled):not(.disabled):active:focus,
-    #comments #static-header .hero-footer #cancel-comment-reply-link:not(:disabled):not(.disabled):active:focus, .btn-outline-light:not(:disabled):not(.disabled).active:focus, #static-header .hero-footer .btn:not(:disabled):not(.disabled).active:focus, #static-header .hero-footer #commentform .submit:not(:disabled):not(.disabled).active:focus, #commentform #static-header .hero-footer .submit:not(:disabled):not(.disabled).active:focus, #static-header .hero-footer #comments .comment-reply-link:not(:disabled):not(.disabled).active:focus, #comments #static-header .hero-footer .comment-reply-link:not(:disabled):not(.disabled).active:focus,
+    #comments #static-header .hero-footer #cancel-comment-reply-link:not(:disabled):not(.disabled):active:focus, #call_action_one .call-action-footer .btn:not(:disabled):not(.disabled):active:focus, #call_action_one .call-action-footer #commentform .submit:not(:disabled):not(.disabled):active:focus, #commentform #call_action_one .call-action-footer .submit:not(:disabled):not(.disabled):active:focus, #call_action_one .call-action-footer #comments .comment-reply-link:not(:disabled):not(.disabled):active:focus, #comments #call_action_one .call-action-footer .comment-reply-link:not(:disabled):not(.disabled):active:focus,
+    #call_action_one .call-action-footer #comments #cancel-comment-reply-link:not(:disabled):not(.disabled):active:focus,
+    #comments #call_action_one .call-action-footer #cancel-comment-reply-link:not(:disabled):not(.disabled):active:focus, .btn-outline-light:not(:disabled):not(.disabled).active:focus, #static-header .hero-footer .btn:not(:disabled):not(.disabled).active:focus, #static-header .hero-footer #commentform .submit:not(:disabled):not(.disabled).active:focus, #commentform #static-header .hero-footer .submit:not(:disabled):not(.disabled).active:focus, #static-header .hero-footer #comments .comment-reply-link:not(:disabled):not(.disabled).active:focus, #comments #static-header .hero-footer .comment-reply-link:not(:disabled):not(.disabled).active:focus,
     #static-header .hero-footer #comments #cancel-comment-reply-link:not(:disabled):not(.disabled).active:focus,
-    #comments #static-header .hero-footer #cancel-comment-reply-link:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-light.dropdown-toggle:focus, #static-header .hero-footer .show > .dropdown-toggle.btn:focus, #static-header .hero-footer #commentform .show > .dropdown-toggle.submit:focus, #commentform #static-header .hero-footer .show > .dropdown-toggle.submit:focus, #static-header .hero-footer #comments .show > .dropdown-toggle.comment-reply-link:focus, #comments #static-header .hero-footer .show > .dropdown-toggle.comment-reply-link:focus,
+    #comments #static-header .hero-footer #cancel-comment-reply-link:not(:disabled):not(.disabled).active:focus, #call_action_one .call-action-footer .btn:not(:disabled):not(.disabled).active:focus, #call_action_one .call-action-footer #commentform .submit:not(:disabled):not(.disabled).active:focus, #commentform #call_action_one .call-action-footer .submit:not(:disabled):not(.disabled).active:focus, #call_action_one .call-action-footer #comments .comment-reply-link:not(:disabled):not(.disabled).active:focus, #comments #call_action_one .call-action-footer .comment-reply-link:not(:disabled):not(.disabled).active:focus,
+    #call_action_one .call-action-footer #comments #cancel-comment-reply-link:not(:disabled):not(.disabled).active:focus,
+    #comments #call_action_one .call-action-footer #cancel-comment-reply-link:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-light.dropdown-toggle:focus, #static-header .hero-footer .show > .dropdown-toggle.btn:focus, #static-header .hero-footer #commentform .show > .dropdown-toggle.submit:focus, #commentform #static-header .hero-footer .show > .dropdown-toggle.submit:focus, #static-header .hero-footer #comments .show > .dropdown-toggle.comment-reply-link:focus, #comments #static-header .hero-footer .show > .dropdown-toggle.comment-reply-link:focus,
     #static-header .hero-footer #comments .show > .dropdown-toggle#cancel-comment-reply-link:focus,
-    #comments #static-header .hero-footer .show > .dropdown-toggle#cancel-comment-reply-link:focus {
+    #comments #static-header .hero-footer .show > .dropdown-toggle#cancel-comment-reply-link:focus, #call_action_one .call-action-footer .show > .dropdown-toggle.btn:focus, #call_action_one .call-action-footer #commentform .show > .dropdown-toggle.submit:focus, #commentform #call_action_one .call-action-footer .show > .dropdown-toggle.submit:focus, #call_action_one .call-action-footer #comments .show > .dropdown-toggle.comment-reply-link:focus, #comments #call_action_one .call-action-footer .show > .dropdown-toggle.comment-reply-link:focus,
+    #call_action_one .call-action-footer #comments .show > .dropdown-toggle#cancel-comment-reply-link:focus,
+    #comments #call_action_one .call-action-footer .show > .dropdown-toggle#cancel-comment-reply-link:focus {
       box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5); }
 
 .btn-outline-dark {
@@ -2568,25 +2692,49 @@ fieldset:disabled #comments a#cancel-comment-reply-link,
     .btn-outline-child-purple:not(:disabled):not(.disabled):active:focus, .btn-outline-child-purple:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-child-purple.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(156, 39, 176, 0.5); }
 
-.btn-outline-child-deep-purple {
+.btn-outline-child-deep-purple, .jumbo-widget-footer .btn, .jumbo-widget-footer #commentform .submit, #commentform .jumbo-widget-footer .submit, .jumbo-widget-footer #comments .comment-reply-link, #comments .jumbo-widget-footer .comment-reply-link,
+.jumbo-widget-footer #comments #cancel-comment-reply-link,
+#comments .jumbo-widget-footer #cancel-comment-reply-link {
   color: #673AB7;
   background-color: transparent;
   background-image: none;
   border-color: #673AB7; }
-  .btn-outline-child-deep-purple:hover {
+  .btn-outline-child-deep-purple:hover, .jumbo-widget-footer .btn:hover, .jumbo-widget-footer #commentform .submit:hover, #commentform .jumbo-widget-footer .submit:hover, .jumbo-widget-footer #comments .comment-reply-link:hover, #comments .jumbo-widget-footer .comment-reply-link:hover,
+  .jumbo-widget-footer #comments #cancel-comment-reply-link:hover,
+  #comments .jumbo-widget-footer #cancel-comment-reply-link:hover {
     color: #fff;
     background-color: #673AB7;
     border-color: #673AB7; }
-  .btn-outline-child-deep-purple:focus, .btn-outline-child-deep-purple.focus {
+  .btn-outline-child-deep-purple:focus, .jumbo-widget-footer .btn:focus, .jumbo-widget-footer #commentform .submit:focus, #commentform .jumbo-widget-footer .submit:focus, .jumbo-widget-footer #comments .comment-reply-link:focus, #comments .jumbo-widget-footer .comment-reply-link:focus,
+  .jumbo-widget-footer #comments #cancel-comment-reply-link:focus,
+  #comments .jumbo-widget-footer #cancel-comment-reply-link:focus, .btn-outline-child-deep-purple.focus, .jumbo-widget-footer .focus.btn, .jumbo-widget-footer #commentform .focus.submit, #commentform .jumbo-widget-footer .focus.submit, .jumbo-widget-footer #comments .focus.comment-reply-link, #comments .jumbo-widget-footer .focus.comment-reply-link,
+  .jumbo-widget-footer #comments .focus#cancel-comment-reply-link,
+  #comments .jumbo-widget-footer .focus#cancel-comment-reply-link {
     box-shadow: 0 0 0 0.2rem rgba(103, 58, 183, 0.5); }
-  .btn-outline-child-deep-purple.disabled, .btn-outline-child-deep-purple:disabled {
+  .btn-outline-child-deep-purple.disabled, .jumbo-widget-footer .disabled.btn, .jumbo-widget-footer #commentform .disabled.submit, #commentform .jumbo-widget-footer .disabled.submit, .jumbo-widget-footer #comments .disabled.comment-reply-link, #comments .jumbo-widget-footer .disabled.comment-reply-link,
+  .jumbo-widget-footer #comments .disabled#cancel-comment-reply-link,
+  #comments .jumbo-widget-footer .disabled#cancel-comment-reply-link, .btn-outline-child-deep-purple:disabled, .jumbo-widget-footer .btn:disabled, .jumbo-widget-footer #commentform .submit:disabled, #commentform .jumbo-widget-footer .submit:disabled, .jumbo-widget-footer #comments .comment-reply-link:disabled, #comments .jumbo-widget-footer .comment-reply-link:disabled,
+  .jumbo-widget-footer #comments #cancel-comment-reply-link:disabled,
+  #comments .jumbo-widget-footer #cancel-comment-reply-link:disabled {
     color: #673AB7;
     background-color: transparent; }
-  .btn-outline-child-deep-purple:not(:disabled):not(.disabled):active, .btn-outline-child-deep-purple:not(:disabled):not(.disabled).active, .show > .btn-outline-child-deep-purple.dropdown-toggle {
+  .btn-outline-child-deep-purple:not(:disabled):not(.disabled):active, .jumbo-widget-footer .btn:not(:disabled):not(.disabled):active, .jumbo-widget-footer #commentform .submit:not(:disabled):not(.disabled):active, #commentform .jumbo-widget-footer .submit:not(:disabled):not(.disabled):active, .jumbo-widget-footer #comments .comment-reply-link:not(:disabled):not(.disabled):active, #comments .jumbo-widget-footer .comment-reply-link:not(:disabled):not(.disabled):active,
+  .jumbo-widget-footer #comments #cancel-comment-reply-link:not(:disabled):not(.disabled):active,
+  #comments .jumbo-widget-footer #cancel-comment-reply-link:not(:disabled):not(.disabled):active, .btn-outline-child-deep-purple:not(:disabled):not(.disabled).active, .jumbo-widget-footer .btn:not(:disabled):not(.disabled).active, .jumbo-widget-footer #commentform .submit:not(:disabled):not(.disabled).active, #commentform .jumbo-widget-footer .submit:not(:disabled):not(.disabled).active, .jumbo-widget-footer #comments .comment-reply-link:not(:disabled):not(.disabled).active, #comments .jumbo-widget-footer .comment-reply-link:not(:disabled):not(.disabled).active,
+  .jumbo-widget-footer #comments #cancel-comment-reply-link:not(:disabled):not(.disabled).active,
+  #comments .jumbo-widget-footer #cancel-comment-reply-link:not(:disabled):not(.disabled).active, .show > .btn-outline-child-deep-purple.dropdown-toggle, .jumbo-widget-footer .show > .dropdown-toggle.btn, .jumbo-widget-footer #commentform .show > .dropdown-toggle.submit, #commentform .jumbo-widget-footer .show > .dropdown-toggle.submit, .jumbo-widget-footer #comments .show > .dropdown-toggle.comment-reply-link, #comments .jumbo-widget-footer .show > .dropdown-toggle.comment-reply-link,
+  .jumbo-widget-footer #comments .show > .dropdown-toggle#cancel-comment-reply-link,
+  #comments .jumbo-widget-footer .show > .dropdown-toggle#cancel-comment-reply-link {
     color: #fff;
     background-color: #673AB7;
     border-color: #673AB7; }
-    .btn-outline-child-deep-purple:not(:disabled):not(.disabled):active:focus, .btn-outline-child-deep-purple:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-child-deep-purple.dropdown-toggle:focus {
+    .btn-outline-child-deep-purple:not(:disabled):not(.disabled):active:focus, .jumbo-widget-footer .btn:not(:disabled):not(.disabled):active:focus, .jumbo-widget-footer #commentform .submit:not(:disabled):not(.disabled):active:focus, #commentform .jumbo-widget-footer .submit:not(:disabled):not(.disabled):active:focus, .jumbo-widget-footer #comments .comment-reply-link:not(:disabled):not(.disabled):active:focus, #comments .jumbo-widget-footer .comment-reply-link:not(:disabled):not(.disabled):active:focus,
+    .jumbo-widget-footer #comments #cancel-comment-reply-link:not(:disabled):not(.disabled):active:focus,
+    #comments .jumbo-widget-footer #cancel-comment-reply-link:not(:disabled):not(.disabled):active:focus, .btn-outline-child-deep-purple:not(:disabled):not(.disabled).active:focus, .jumbo-widget-footer .btn:not(:disabled):not(.disabled).active:focus, .jumbo-widget-footer #commentform .submit:not(:disabled):not(.disabled).active:focus, #commentform .jumbo-widget-footer .submit:not(:disabled):not(.disabled).active:focus, .jumbo-widget-footer #comments .comment-reply-link:not(:disabled):not(.disabled).active:focus, #comments .jumbo-widget-footer .comment-reply-link:not(:disabled):not(.disabled).active:focus,
+    .jumbo-widget-footer #comments #cancel-comment-reply-link:not(:disabled):not(.disabled).active:focus,
+    #comments .jumbo-widget-footer #cancel-comment-reply-link:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-child-deep-purple.dropdown-toggle:focus, .jumbo-widget-footer .show > .dropdown-toggle.btn:focus, .jumbo-widget-footer #commentform .show > .dropdown-toggle.submit:focus, #commentform .jumbo-widget-footer .show > .dropdown-toggle.submit:focus, .jumbo-widget-footer #comments .show > .dropdown-toggle.comment-reply-link:focus, #comments .jumbo-widget-footer .show > .dropdown-toggle.comment-reply-link:focus,
+    .jumbo-widget-footer #comments .show > .dropdown-toggle#cancel-comment-reply-link:focus,
+    #comments .jumbo-widget-footer .show > .dropdown-toggle#cancel-comment-reply-link:focus {
       box-shadow: 0 0 0 0.2rem rgba(103, 58, 183, 0.5); }
 
 .btn-outline-child-indigo {
@@ -2610,49 +2758,88 @@ fieldset:disabled #comments a#cancel-comment-reply-link,
     .btn-outline-child-indigo:not(:disabled):not(.disabled):active:focus, .btn-outline-child-indigo:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-child-indigo.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(63, 81, 181, 0.5); }
 
-.btn-outline-child-primary, .jumbo-widget-footer .btn, .jumbo-widget-footer #commentform .submit, #commentform .jumbo-widget-footer .submit, .jumbo-widget-footer #comments .comment-reply-link, #comments .jumbo-widget-footer .comment-reply-link,
-.jumbo-widget-footer #comments #cancel-comment-reply-link,
-#comments .jumbo-widget-footer #cancel-comment-reply-link {
+.btn-outline-child-green {
+  color: #4CAF50;
+  background-color: transparent;
+  background-image: none;
+  border-color: #4CAF50; }
+  .btn-outline-child-green:hover {
+    color: #fff;
+    background-color: #4CAF50;
+    border-color: #4CAF50; }
+  .btn-outline-child-green:focus, .btn-outline-child-green.focus {
+    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.5); }
+  .btn-outline-child-green.disabled, .btn-outline-child-green:disabled {
+    color: #4CAF50;
+    background-color: transparent; }
+  .btn-outline-child-green:not(:disabled):not(.disabled):active, .btn-outline-child-green:not(:disabled):not(.disabled).active, .show > .btn-outline-child-green.dropdown-toggle {
+    color: #fff;
+    background-color: #4CAF50;
+    border-color: #4CAF50; }
+    .btn-outline-child-green:not(:disabled):not(.disabled):active:focus, .btn-outline-child-green:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-child-green.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.5); }
+
+.btn-outline-child-orange {
+  color: #FF9800;
+  background-color: transparent;
+  background-image: none;
+  border-color: #FF9800; }
+  .btn-outline-child-orange:hover {
+    color: #212529;
+    background-color: #FF9800;
+    border-color: #FF9800; }
+  .btn-outline-child-orange:focus, .btn-outline-child-orange.focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 152, 0, 0.5); }
+  .btn-outline-child-orange.disabled, .btn-outline-child-orange:disabled {
+    color: #FF9800;
+    background-color: transparent; }
+  .btn-outline-child-orange:not(:disabled):not(.disabled):active, .btn-outline-child-orange:not(:disabled):not(.disabled).active, .show > .btn-outline-child-orange.dropdown-toggle {
+    color: #212529;
+    background-color: #FF9800;
+    border-color: #FF9800; }
+    .btn-outline-child-orange:not(:disabled):not(.disabled):active:focus, .btn-outline-child-orange:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-child-orange.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(255, 152, 0, 0.5); }
+
+.btn-outline-child-deep-orange {
+  color: #FF5722;
+  background-color: transparent;
+  background-image: none;
+  border-color: #FF5722; }
+  .btn-outline-child-deep-orange:hover {
+    color: #fff;
+    background-color: #FF5722;
+    border-color: #FF5722; }
+  .btn-outline-child-deep-orange:focus, .btn-outline-child-deep-orange.focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 87, 34, 0.5); }
+  .btn-outline-child-deep-orange.disabled, .btn-outline-child-deep-orange:disabled {
+    color: #FF5722;
+    background-color: transparent; }
+  .btn-outline-child-deep-orange:not(:disabled):not(.disabled):active, .btn-outline-child-deep-orange:not(:disabled):not(.disabled).active, .show > .btn-outline-child-deep-orange.dropdown-toggle {
+    color: #fff;
+    background-color: #FF5722;
+    border-color: #FF5722; }
+    .btn-outline-child-deep-orange:not(:disabled):not(.disabled):active:focus, .btn-outline-child-deep-orange:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-child-deep-orange.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0.2rem rgba(255, 87, 34, 0.5); }
+
+.btn-outline-child-primary {
   color: #3F51B5;
   background-color: transparent;
   background-image: none;
   border-color: #3F51B5; }
-  .btn-outline-child-primary:hover, .jumbo-widget-footer .btn:hover, .jumbo-widget-footer #commentform .submit:hover, #commentform .jumbo-widget-footer .submit:hover, .jumbo-widget-footer #comments .comment-reply-link:hover, #comments .jumbo-widget-footer .comment-reply-link:hover,
-  .jumbo-widget-footer #comments #cancel-comment-reply-link:hover,
-  #comments .jumbo-widget-footer #cancel-comment-reply-link:hover {
+  .btn-outline-child-primary:hover {
     color: #fff;
     background-color: #3F51B5;
     border-color: #3F51B5; }
-  .btn-outline-child-primary:focus, .jumbo-widget-footer .btn:focus, .jumbo-widget-footer #commentform .submit:focus, #commentform .jumbo-widget-footer .submit:focus, .jumbo-widget-footer #comments .comment-reply-link:focus, #comments .jumbo-widget-footer .comment-reply-link:focus,
-  .jumbo-widget-footer #comments #cancel-comment-reply-link:focus,
-  #comments .jumbo-widget-footer #cancel-comment-reply-link:focus, .btn-outline-child-primary.focus, .jumbo-widget-footer .focus.btn, .jumbo-widget-footer #commentform .focus.submit, #commentform .jumbo-widget-footer .focus.submit, .jumbo-widget-footer #comments .focus.comment-reply-link, #comments .jumbo-widget-footer .focus.comment-reply-link,
-  .jumbo-widget-footer #comments .focus#cancel-comment-reply-link,
-  #comments .jumbo-widget-footer .focus#cancel-comment-reply-link {
+  .btn-outline-child-primary:focus, .btn-outline-child-primary.focus {
     box-shadow: 0 0 0 0.2rem rgba(63, 81, 181, 0.5); }
-  .btn-outline-child-primary.disabled, .jumbo-widget-footer .disabled.btn, .jumbo-widget-footer #commentform .disabled.submit, #commentform .jumbo-widget-footer .disabled.submit, .jumbo-widget-footer #comments .disabled.comment-reply-link, #comments .jumbo-widget-footer .disabled.comment-reply-link,
-  .jumbo-widget-footer #comments .disabled#cancel-comment-reply-link,
-  #comments .jumbo-widget-footer .disabled#cancel-comment-reply-link, .btn-outline-child-primary:disabled, .jumbo-widget-footer .btn:disabled, .jumbo-widget-footer #commentform .submit:disabled, #commentform .jumbo-widget-footer .submit:disabled, .jumbo-widget-footer #comments .comment-reply-link:disabled, #comments .jumbo-widget-footer .comment-reply-link:disabled,
-  .jumbo-widget-footer #comments #cancel-comment-reply-link:disabled,
-  #comments .jumbo-widget-footer #cancel-comment-reply-link:disabled {
+  .btn-outline-child-primary.disabled, .btn-outline-child-primary:disabled {
     color: #3F51B5;
     background-color: transparent; }
-  .btn-outline-child-primary:not(:disabled):not(.disabled):active, .jumbo-widget-footer .btn:not(:disabled):not(.disabled):active, .jumbo-widget-footer #commentform .submit:not(:disabled):not(.disabled):active, #commentform .jumbo-widget-footer .submit:not(:disabled):not(.disabled):active, .jumbo-widget-footer #comments .comment-reply-link:not(:disabled):not(.disabled):active, #comments .jumbo-widget-footer .comment-reply-link:not(:disabled):not(.disabled):active,
-  .jumbo-widget-footer #comments #cancel-comment-reply-link:not(:disabled):not(.disabled):active,
-  #comments .jumbo-widget-footer #cancel-comment-reply-link:not(:disabled):not(.disabled):active, .btn-outline-child-primary:not(:disabled):not(.disabled).active, .jumbo-widget-footer .btn:not(:disabled):not(.disabled).active, .jumbo-widget-footer #commentform .submit:not(:disabled):not(.disabled).active, #commentform .jumbo-widget-footer .submit:not(:disabled):not(.disabled).active, .jumbo-widget-footer #comments .comment-reply-link:not(:disabled):not(.disabled).active, #comments .jumbo-widget-footer .comment-reply-link:not(:disabled):not(.disabled).active,
-  .jumbo-widget-footer #comments #cancel-comment-reply-link:not(:disabled):not(.disabled).active,
-  #comments .jumbo-widget-footer #cancel-comment-reply-link:not(:disabled):not(.disabled).active, .show > .btn-outline-child-primary.dropdown-toggle, .jumbo-widget-footer .show > .dropdown-toggle.btn, .jumbo-widget-footer #commentform .show > .dropdown-toggle.submit, #commentform .jumbo-widget-footer .show > .dropdown-toggle.submit, .jumbo-widget-footer #comments .show > .dropdown-toggle.comment-reply-link, #comments .jumbo-widget-footer .show > .dropdown-toggle.comment-reply-link,
-  .jumbo-widget-footer #comments .show > .dropdown-toggle#cancel-comment-reply-link,
-  #comments .jumbo-widget-footer .show > .dropdown-toggle#cancel-comment-reply-link {
+  .btn-outline-child-primary:not(:disabled):not(.disabled):active, .btn-outline-child-primary:not(:disabled):not(.disabled).active, .show > .btn-outline-child-primary.dropdown-toggle {
     color: #fff;
     background-color: #3F51B5;
     border-color: #3F51B5; }
-    .btn-outline-child-primary:not(:disabled):not(.disabled):active:focus, .jumbo-widget-footer .btn:not(:disabled):not(.disabled):active:focus, .jumbo-widget-footer #commentform .submit:not(:disabled):not(.disabled):active:focus, #commentform .jumbo-widget-footer .submit:not(:disabled):not(.disabled):active:focus, .jumbo-widget-footer #comments .comment-reply-link:not(:disabled):not(.disabled):active:focus, #comments .jumbo-widget-footer .comment-reply-link:not(:disabled):not(.disabled):active:focus,
-    .jumbo-widget-footer #comments #cancel-comment-reply-link:not(:disabled):not(.disabled):active:focus,
-    #comments .jumbo-widget-footer #cancel-comment-reply-link:not(:disabled):not(.disabled):active:focus, .btn-outline-child-primary:not(:disabled):not(.disabled).active:focus, .jumbo-widget-footer .btn:not(:disabled):not(.disabled).active:focus, .jumbo-widget-footer #commentform .submit:not(:disabled):not(.disabled).active:focus, #commentform .jumbo-widget-footer .submit:not(:disabled):not(.disabled).active:focus, .jumbo-widget-footer #comments .comment-reply-link:not(:disabled):not(.disabled).active:focus, #comments .jumbo-widget-footer .comment-reply-link:not(:disabled):not(.disabled).active:focus,
-    .jumbo-widget-footer #comments #cancel-comment-reply-link:not(:disabled):not(.disabled).active:focus,
-    #comments .jumbo-widget-footer #cancel-comment-reply-link:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-child-primary.dropdown-toggle:focus, .jumbo-widget-footer .show > .dropdown-toggle.btn:focus, .jumbo-widget-footer #commentform .show > .dropdown-toggle.submit:focus, #commentform .jumbo-widget-footer .show > .dropdown-toggle.submit:focus, .jumbo-widget-footer #comments .show > .dropdown-toggle.comment-reply-link:focus, #comments .jumbo-widget-footer .show > .dropdown-toggle.comment-reply-link:focus,
-    .jumbo-widget-footer #comments .show > .dropdown-toggle#cancel-comment-reply-link:focus,
-    #comments .jumbo-widget-footer .show > .dropdown-toggle#cancel-comment-reply-link:focus {
+    .btn-outline-child-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-child-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-child-primary.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(63, 81, 181, 0.5); }
 
 .btn-outline-child-success {
@@ -2780,7 +2967,9 @@ fieldset:disabled #comments a#cancel-comment-reply-link,
 .btn-lg, .btn-group-lg > .btn, #commentform .btn-group-lg > .submit, #comments .btn-group-lg > .comment-reply-link,
 #comments .btn-group-lg > #cancel-comment-reply-link, #static-header .hero-footer .btn, #static-header .hero-footer #commentform .submit, #commentform #static-header .hero-footer .submit, #static-header .hero-footer #comments .comment-reply-link, #comments #static-header .hero-footer .comment-reply-link,
 #static-header .hero-footer #comments #cancel-comment-reply-link,
-#comments #static-header .hero-footer #cancel-comment-reply-link {
+#comments #static-header .hero-footer #cancel-comment-reply-link, #call_action_one .call-action-footer .btn, #call_action_one .call-action-footer #commentform .submit, #commentform #call_action_one .call-action-footer .submit, #call_action_one .call-action-footer #comments .comment-reply-link, #comments #call_action_one .call-action-footer .comment-reply-link,
+#call_action_one .call-action-footer #comments #cancel-comment-reply-link,
+#comments #call_action_one .call-action-footer #cancel-comment-reply-link {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -3158,7 +3347,9 @@ input[type="button"].btn-block {
 .btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, #commentform .btn-group-lg > .submit + .dropdown-toggle-split, #comments .btn-group-lg > .comment-reply-link + .dropdown-toggle-split,
 #comments .btn-group-lg > #cancel-comment-reply-link + .dropdown-toggle-split, #static-header .hero-footer .btn + .dropdown-toggle-split, #static-header .hero-footer #commentform .submit + .dropdown-toggle-split, #commentform #static-header .hero-footer .submit + .dropdown-toggle-split, #static-header .hero-footer #comments .comment-reply-link + .dropdown-toggle-split, #comments #static-header .hero-footer .comment-reply-link + .dropdown-toggle-split,
 #static-header .hero-footer #comments #cancel-comment-reply-link + .dropdown-toggle-split,
-#comments #static-header .hero-footer #cancel-comment-reply-link + .dropdown-toggle-split {
+#comments #static-header .hero-footer #cancel-comment-reply-link + .dropdown-toggle-split, #call_action_one .call-action-footer .btn + .dropdown-toggle-split, #call_action_one .call-action-footer #commentform .submit + .dropdown-toggle-split, #commentform #call_action_one .call-action-footer .submit + .dropdown-toggle-split, #call_action_one .call-action-footer #comments .comment-reply-link + .dropdown-toggle-split, #comments #call_action_one .call-action-footer .comment-reply-link + .dropdown-toggle-split,
+#call_action_one .call-action-footer #comments #cancel-comment-reply-link + .dropdown-toggle-split,
+#comments #call_action_one .call-action-footer #cancel-comment-reply-link + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -3863,7 +4054,7 @@ input[type="button"].btn-block {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem; }
-  .navbar > .container,
+  .navbar > .container, #call_action_one .navbar > .call-action-wrapper,
   .navbar > .container-fluid {
     display: flex;
     flex-wrap: wrap;
@@ -3928,7 +4119,7 @@ input[type="button"].btn-block {
   background-size: 100% 100%; }
 
 @media (max-width: 575.98px) {
-  .navbar-expand-sm > .container,
+  .navbar-expand-sm > .container, #call_action_one .navbar-expand-sm > .call-action-wrapper,
   .navbar-expand-sm > .container-fluid {
     padding-right: 0;
     padding-left: 0; } }
@@ -3945,7 +4136,7 @@ input[type="button"].btn-block {
       #comments-navigation.nav .navbar-expand-sm .navbar-nav a {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
-    .navbar-expand-sm > .container,
+    .navbar-expand-sm > .container, #call_action_one .navbar-expand-sm > .call-action-wrapper,
     .navbar-expand-sm > .container-fluid {
       flex-wrap: nowrap; }
     .navbar-expand-sm .navbar-collapse {
@@ -3954,7 +4145,7 @@ input[type="button"].btn-block {
     .navbar-expand-sm .navbar-toggler {
       display: none; } }
 @media (max-width: 767.98px) {
-  .navbar-expand-md > .container,
+  .navbar-expand-md > .container, #call_action_one .navbar-expand-md > .call-action-wrapper,
   .navbar-expand-md > .container-fluid {
     padding-right: 0;
     padding-left: 0; } }
@@ -3971,7 +4162,7 @@ input[type="button"].btn-block {
       #comments-navigation.nav .navbar-expand-md .navbar-nav a {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
-    .navbar-expand-md > .container,
+    .navbar-expand-md > .container, #call_action_one .navbar-expand-md > .call-action-wrapper,
     .navbar-expand-md > .container-fluid {
       flex-wrap: nowrap; }
     .navbar-expand-md .navbar-collapse {
@@ -3980,7 +4171,7 @@ input[type="button"].btn-block {
     .navbar-expand-md .navbar-toggler {
       display: none; } }
 @media (max-width: 991.98px) {
-  .navbar-expand-lg > .container,
+  .navbar-expand-lg > .container, #call_action_one .navbar-expand-lg > .call-action-wrapper,
   .navbar-expand-lg > .container-fluid {
     padding-right: 0;
     padding-left: 0; } }
@@ -3997,7 +4188,7 @@ input[type="button"].btn-block {
       #comments-navigation.nav .navbar-expand-lg .navbar-nav a {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
-    .navbar-expand-lg > .container,
+    .navbar-expand-lg > .container, #call_action_one .navbar-expand-lg > .call-action-wrapper,
     .navbar-expand-lg > .container-fluid {
       flex-wrap: nowrap; }
     .navbar-expand-lg .navbar-collapse {
@@ -4006,7 +4197,7 @@ input[type="button"].btn-block {
     .navbar-expand-lg .navbar-toggler {
       display: none; } }
 @media (max-width: 1199.98px) {
-  .navbar-expand-xl > .container,
+  .navbar-expand-xl > .container, #call_action_one .navbar-expand-xl > .call-action-wrapper,
   .navbar-expand-xl > .container-fluid {
     padding-right: 0;
     padding-left: 0; } }
@@ -4023,7 +4214,7 @@ input[type="button"].btn-block {
       #comments-navigation.nav .navbar-expand-xl .navbar-nav a {
         padding-right: 0.5rem;
         padding-left: 0.5rem; }
-    .navbar-expand-xl > .container,
+    .navbar-expand-xl > .container, #call_action_one .navbar-expand-xl > .call-action-wrapper,
     .navbar-expand-xl > .container-fluid {
       flex-wrap: nowrap; }
     .navbar-expand-xl .navbar-collapse {
@@ -4034,7 +4225,7 @@ input[type="button"].btn-block {
 .navbar-expand {
   flex-flow: row nowrap;
   justify-content: flex-start; }
-  .navbar-expand > .container,
+  .navbar-expand > .container, #call_action_one .navbar-expand > .call-action-wrapper,
   .navbar-expand > .container-fluid {
     padding-right: 0;
     padding-left: 0; }
@@ -4047,7 +4238,7 @@ input[type="button"].btn-block {
     #comments-navigation.nav .navbar-expand .navbar-nav a {
       padding-right: 0.5rem;
       padding-left: 0.5rem; }
-  .navbar-expand > .container,
+  .navbar-expand > .container, #call_action_one .navbar-expand > .call-action-wrapper,
   .navbar-expand > .container-fluid {
     flex-wrap: nowrap; }
   .navbar-expand .navbar-collapse {
@@ -4056,59 +4247,90 @@ input[type="button"].btn-block {
   .navbar-expand .navbar-toggler {
     display: none; }
 
-.navbar-light .navbar-brand {
+.navbar-light .navbar-brand, #top-menu .navbar.nav-primary .navbar-brand {
   color: rgba(0, 0, 0, 0.9); }
-  .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
+  .navbar-light .navbar-brand:hover, #top-menu .navbar.nav-primary .navbar-brand:hover, .navbar-light .navbar-brand:focus, #top-menu .navbar.nav-primary .navbar-brand:focus {
     color: rgba(0, 0, 0, 0.9); }
-.navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav #site-pagination.prev-next a, #site-pagination.prev-next .navbar-light .navbar-nav a, .navbar-light .navbar-nav #posts-navigation.nav a, #posts-navigation.nav .navbar-light .navbar-nav a,
+.navbar-light .navbar-nav .nav-link, #top-menu .navbar.nav-primary .navbar-nav .nav-link, .navbar-light .navbar-nav #site-pagination.prev-next a, #site-pagination.prev-next .navbar-light .navbar-nav a, #top-menu .navbar.nav-primary .navbar-nav #site-pagination.prev-next a, #site-pagination.prev-next #top-menu .navbar.nav-primary .navbar-nav a, .navbar-light .navbar-nav #posts-navigation.nav a, #posts-navigation.nav .navbar-light .navbar-nav a, #top-menu .navbar.nav-primary .navbar-nav #posts-navigation.nav a, #posts-navigation.nav #top-menu .navbar.nav-primary .navbar-nav a,
 .navbar-light .navbar-nav #comments-navigation.nav a,
-#comments-navigation.nav .navbar-light .navbar-nav a {
+#comments-navigation.nav .navbar-light .navbar-nav a,
+#top-menu .navbar.nav-primary .navbar-nav #comments-navigation.nav a,
+#comments-navigation.nav #top-menu .navbar.nav-primary .navbar-nav a {
   color: rgba(0, 0, 0, 0.5); }
-  .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav #site-pagination.prev-next a:hover, #site-pagination.prev-next .navbar-light .navbar-nav a:hover, .navbar-light .navbar-nav #posts-navigation.nav a:hover, #posts-navigation.nav .navbar-light .navbar-nav a:hover,
+  .navbar-light .navbar-nav .nav-link:hover, #top-menu .navbar.nav-primary .navbar-nav .nav-link:hover, .navbar-light .navbar-nav #site-pagination.prev-next a:hover, #site-pagination.prev-next .navbar-light .navbar-nav a:hover, #top-menu .navbar.nav-primary .navbar-nav #site-pagination.prev-next a:hover, #site-pagination.prev-next #top-menu .navbar.nav-primary .navbar-nav a:hover, .navbar-light .navbar-nav #posts-navigation.nav a:hover, #posts-navigation.nav .navbar-light .navbar-nav a:hover, #top-menu .navbar.nav-primary .navbar-nav #posts-navigation.nav a:hover, #posts-navigation.nav #top-menu .navbar.nav-primary .navbar-nav a:hover,
   .navbar-light .navbar-nav #comments-navigation.nav a:hover,
-  #comments-navigation.nav .navbar-light .navbar-nav a:hover, .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav #site-pagination.prev-next a:focus, #site-pagination.prev-next .navbar-light .navbar-nav a:focus, .navbar-light .navbar-nav #posts-navigation.nav a:focus, #posts-navigation.nav .navbar-light .navbar-nav a:focus,
+  #comments-navigation.nav .navbar-light .navbar-nav a:hover,
+  #top-menu .navbar.nav-primary .navbar-nav #comments-navigation.nav a:hover,
+  #comments-navigation.nav #top-menu .navbar.nav-primary .navbar-nav a:hover, .navbar-light .navbar-nav .nav-link:focus, #top-menu .navbar.nav-primary .navbar-nav .nav-link:focus, .navbar-light .navbar-nav #site-pagination.prev-next a:focus, #site-pagination.prev-next .navbar-light .navbar-nav a:focus, #top-menu .navbar.nav-primary .navbar-nav #site-pagination.prev-next a:focus, #site-pagination.prev-next #top-menu .navbar.nav-primary .navbar-nav a:focus, .navbar-light .navbar-nav #posts-navigation.nav a:focus, #posts-navigation.nav .navbar-light .navbar-nav a:focus, #top-menu .navbar.nav-primary .navbar-nav #posts-navigation.nav a:focus, #posts-navigation.nav #top-menu .navbar.nav-primary .navbar-nav a:focus,
   .navbar-light .navbar-nav #comments-navigation.nav a:focus,
-  #comments-navigation.nav .navbar-light .navbar-nav a:focus {
+  #comments-navigation.nav .navbar-light .navbar-nav a:focus,
+  #top-menu .navbar.nav-primary .navbar-nav #comments-navigation.nav a:focus,
+  #comments-navigation.nav #top-menu .navbar.nav-primary .navbar-nav a:focus {
     color: rgba(0, 0, 0, 0.7); }
-  .navbar-light .navbar-nav .nav-link.disabled, .navbar-light .navbar-nav #site-pagination.prev-next a.disabled, #site-pagination.prev-next .navbar-light .navbar-nav a.disabled, .navbar-light .navbar-nav #posts-navigation.nav a.disabled, #posts-navigation.nav .navbar-light .navbar-nav a.disabled,
+  .navbar-light .navbar-nav .nav-link.disabled, #top-menu .navbar.nav-primary .navbar-nav .nav-link.disabled, .navbar-light .navbar-nav #site-pagination.prev-next a.disabled, #site-pagination.prev-next .navbar-light .navbar-nav a.disabled, #top-menu .navbar.nav-primary .navbar-nav #site-pagination.prev-next a.disabled, #site-pagination.prev-next #top-menu .navbar.nav-primary .navbar-nav a.disabled, .navbar-light .navbar-nav #posts-navigation.nav a.disabled, #posts-navigation.nav .navbar-light .navbar-nav a.disabled, #top-menu .navbar.nav-primary .navbar-nav #posts-navigation.nav a.disabled, #posts-navigation.nav #top-menu .navbar.nav-primary .navbar-nav a.disabled,
   .navbar-light .navbar-nav #comments-navigation.nav a.disabled,
-  #comments-navigation.nav .navbar-light .navbar-nav a.disabled {
+  #comments-navigation.nav .navbar-light .navbar-nav a.disabled,
+  #top-menu .navbar.nav-primary .navbar-nav #comments-navigation.nav a.disabled,
+  #comments-navigation.nav #top-menu .navbar.nav-primary .navbar-nav a.disabled {
     color: rgba(0, 0, 0, 0.3); }
-.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav #site-pagination.prev-next .show > a, #site-pagination.prev-next .navbar-light .navbar-nav .show > a, .navbar-light .navbar-nav #posts-navigation.nav .show > a, #posts-navigation.nav .navbar-light .navbar-nav .show > a,
+.navbar-light .navbar-nav .show > .nav-link, #top-menu .navbar.nav-primary .navbar-nav .show > .nav-link, .navbar-light .navbar-nav #site-pagination.prev-next .show > a, #site-pagination.prev-next .navbar-light .navbar-nav .show > a, #top-menu .navbar.nav-primary .navbar-nav #site-pagination.prev-next .show > a, #site-pagination.prev-next #top-menu .navbar.nav-primary .navbar-nav .show > a, .navbar-light .navbar-nav #posts-navigation.nav .show > a, #posts-navigation.nav .navbar-light .navbar-nav .show > a, #top-menu .navbar.nav-primary .navbar-nav #posts-navigation.nav .show > a, #posts-navigation.nav #top-menu .navbar.nav-primary .navbar-nav .show > a,
 .navbar-light .navbar-nav #comments-navigation.nav .show > a,
 #comments-navigation.nav .navbar-light .navbar-nav .show > a,
+#top-menu .navbar.nav-primary .navbar-nav #comments-navigation.nav .show > a,
+#comments-navigation.nav #top-menu .navbar.nav-primary .navbar-nav .show > a,
 .navbar-light .navbar-nav .active > .nav-link,
+#top-menu .navbar.nav-primary .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav #site-pagination.prev-next .active > a,
 #site-pagination.prev-next .navbar-light .navbar-nav .active > a,
+#top-menu .navbar.nav-primary .navbar-nav #site-pagination.prev-next .active > a,
+#site-pagination.prev-next #top-menu .navbar.nav-primary .navbar-nav .active > a,
 .navbar-light .navbar-nav #posts-navigation.nav .active > a,
 #posts-navigation.nav .navbar-light .navbar-nav .active > a,
+#top-menu .navbar.nav-primary .navbar-nav #posts-navigation.nav .active > a,
+#posts-navigation.nav #top-menu .navbar.nav-primary .navbar-nav .active > a,
 .navbar-light .navbar-nav #comments-navigation.nav .active > a,
 #comments-navigation.nav .navbar-light .navbar-nav .active > a,
+#top-menu .navbar.nav-primary .navbar-nav #comments-navigation.nav .active > a,
+#comments-navigation.nav #top-menu .navbar.nav-primary .navbar-nav .active > a,
 .navbar-light .navbar-nav .nav-link.show,
+#top-menu .navbar.nav-primary .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav #site-pagination.prev-next a.show,
 #site-pagination.prev-next .navbar-light .navbar-nav a.show,
+#top-menu .navbar.nav-primary .navbar-nav #site-pagination.prev-next a.show,
+#site-pagination.prev-next #top-menu .navbar.nav-primary .navbar-nav a.show,
 .navbar-light .navbar-nav #posts-navigation.nav a.show,
 #posts-navigation.nav .navbar-light .navbar-nav a.show,
+#top-menu .navbar.nav-primary .navbar-nav #posts-navigation.nav a.show,
+#posts-navigation.nav #top-menu .navbar.nav-primary .navbar-nav a.show,
 .navbar-light .navbar-nav #comments-navigation.nav a.show,
 #comments-navigation.nav .navbar-light .navbar-nav a.show,
+#top-menu .navbar.nav-primary .navbar-nav #comments-navigation.nav a.show,
+#comments-navigation.nav #top-menu .navbar.nav-primary .navbar-nav a.show,
 .navbar-light .navbar-nav .nav-link.active,
+#top-menu .navbar.nav-primary .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav #site-pagination.prev-next a.active,
 #site-pagination.prev-next .navbar-light .navbar-nav a.active,
+#top-menu .navbar.nav-primary .navbar-nav #site-pagination.prev-next a.active,
+#site-pagination.prev-next #top-menu .navbar.nav-primary .navbar-nav a.active,
 .navbar-light .navbar-nav #posts-navigation.nav a.active,
 #posts-navigation.nav .navbar-light .navbar-nav a.active,
+#top-menu .navbar.nav-primary .navbar-nav #posts-navigation.nav a.active,
+#posts-navigation.nav #top-menu .navbar.nav-primary .navbar-nav a.active,
 .navbar-light .navbar-nav #comments-navigation.nav a.active,
-#comments-navigation.nav .navbar-light .navbar-nav a.active {
+#comments-navigation.nav .navbar-light .navbar-nav a.active,
+#top-menu .navbar.nav-primary .navbar-nav #comments-navigation.nav a.active,
+#comments-navigation.nav #top-menu .navbar.nav-primary .navbar-nav a.active {
   color: rgba(0, 0, 0, 0.9); }
-.navbar-light .navbar-toggler {
+.navbar-light .navbar-toggler, #top-menu .navbar.nav-primary .navbar-toggler {
   color: rgba(0, 0, 0, 0.5);
   border-color: rgba(0, 0, 0, 0.1); }
-.navbar-light .navbar-toggler-icon {
+.navbar-light .navbar-toggler-icon, #top-menu .navbar.nav-primary .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); }
-.navbar-light .navbar-text {
+.navbar-light .navbar-text, #top-menu .navbar.nav-primary .navbar-text {
   color: rgba(0, 0, 0, 0.5); }
-  .navbar-light .navbar-text a {
+  .navbar-light .navbar-text a, #top-menu .navbar.nav-primary .navbar-text a {
     color: rgba(0, 0, 0, 0.9); }
-    .navbar-light .navbar-text a:hover, .navbar-light .navbar-text a:focus {
+    .navbar-light .navbar-text a:hover, #top-menu .navbar.nav-primary .navbar-text a:hover, .navbar-light .navbar-text a:focus, #top-menu .navbar.nav-primary .navbar-text a:focus {
       color: rgba(0, 0, 0, 0.9); }
 
 .navbar-dark .navbar-brand {
@@ -4566,6 +4788,30 @@ input[type="button"].btn-block {
     text-decoration: none;
     background-color: #32408f; }
 
+.badge-child-green {
+  color: #fff;
+  background-color: #4CAF50; }
+  .badge-child-green[href]:hover, .badge-child-green[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #3d8b40; }
+
+.badge-child-orange {
+  color: #212529;
+  background-color: #FF9800; }
+  .badge-child-orange[href]:hover, .badge-child-orange[href]:focus {
+    color: #212529;
+    text-decoration: none;
+    background-color: #cc7a00; }
+
+.badge-child-deep-orange {
+  color: #fff;
+  background-color: #FF5722; }
+  .badge-child-deep-orange[href]:hover, .badge-child-deep-orange[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #ee3900; }
+
 .badge-child-primary {
   color: #fff;
   background-color: #3F51B5; }
@@ -4766,6 +5012,33 @@ input[type="button"].btn-block {
     border-top-color: #b7bde3; }
   .alert-child-indigo .alert-link {
     color: #141938; }
+
+.alert-child-green {
+  color: #285b2a;
+  background-color: #dbefdc;
+  border-color: #cde9ce; }
+  .alert-child-green hr {
+    border-top-color: #bbe1bd; }
+  .alert-child-green .alert-link {
+    color: #18381a; }
+
+.alert-child-orange {
+  color: #854f00;
+  background-color: #ffeacc;
+  border-color: #ffe2b8; }
+  .alert-child-orange hr {
+    border-top-color: #ffd89f; }
+  .alert-child-orange .alert-link {
+    color: #523100; }
+
+.alert-child-deep-orange {
+  color: #852d12;
+  background-color: #ffddd3;
+  border-color: #ffd0c1; }
+  .alert-child-deep-orange hr {
+    border-top-color: #ffbda8; }
+  .alert-child-deep-orange .alert-link {
+    color: #581e0c; }
 
 .alert-child-primary {
   color: #212a5e;
@@ -5056,6 +5329,39 @@ input[type="button"].btn-block {
     color: #fff;
     background-color: #212a5e;
     border-color: #212a5e; }
+
+.list-group-item-child-green {
+  color: #285b2a;
+  background-color: #cde9ce; }
+  .list-group-item-child-green.list-group-item-action:hover, .list-group-item-child-green.list-group-item-action:focus {
+    color: #285b2a;
+    background-color: #bbe1bd; }
+  .list-group-item-child-green.list-group-item-action.active {
+    color: #fff;
+    background-color: #285b2a;
+    border-color: #285b2a; }
+
+.list-group-item-child-orange {
+  color: #854f00;
+  background-color: #ffe2b8; }
+  .list-group-item-child-orange.list-group-item-action:hover, .list-group-item-child-orange.list-group-item-action:focus {
+    color: #854f00;
+    background-color: #ffd89f; }
+  .list-group-item-child-orange.list-group-item-action.active {
+    color: #fff;
+    background-color: #854f00;
+    border-color: #854f00; }
+
+.list-group-item-child-deep-orange {
+  color: #852d12;
+  background-color: #ffd0c1; }
+  .list-group-item-child-deep-orange.list-group-item-action:hover, .list-group-item-child-deep-orange.list-group-item-action:focus {
+    color: #852d12;
+    background-color: #ffbda8; }
+  .list-group-item-child-deep-orange.list-group-item-action.active {
+    color: #fff;
+    background-color: #852d12;
+    border-color: #852d12; }
 
 .list-group-item-child-primary {
   color: #212a5e;
@@ -5716,14 +6022,12 @@ button.bg-danger:hover,
 button.bg-danger:focus {
   background-color: #bd2130 !important; }
 
-.bg-light, #footer .site-info {
+.bg-light {
   background-color: #f8f9fa !important; }
 
-a.bg-light:hover, #footer a.site-info:hover, a.bg-light:focus, #footer a.site-info:focus,
+a.bg-light:hover, a.bg-light:focus,
 button.bg-light:hover,
-#footer button.site-info:hover,
-button.bg-light:focus,
-#footer button.site-info:focus {
+button.bg-light:focus {
   background-color: #dae0e5 !important; }
 
 .bg-dark, #maintenance-mode-alert {
@@ -5776,6 +6080,30 @@ button.bg-child-indigo:hover,
 button.bg-child-indigo:focus {
   background-color: #32408f !important; }
 
+.bg-child-green {
+  background-color: #4CAF50 !important; }
+
+a.bg-child-green:hover, a.bg-child-green:focus,
+button.bg-child-green:hover,
+button.bg-child-green:focus {
+  background-color: #3d8b40 !important; }
+
+.bg-child-orange {
+  background-color: #FF9800 !important; }
+
+a.bg-child-orange:hover, a.bg-child-orange:focus,
+button.bg-child-orange:hover,
+button.bg-child-orange:focus {
+  background-color: #cc7a00 !important; }
+
+.bg-child-deep-orange {
+  background-color: #FF5722 !important; }
+
+a.bg-child-deep-orange:hover, a.bg-child-deep-orange:focus,
+button.bg-child-deep-orange:hover,
+button.bg-child-deep-orange:focus {
+  background-color: #ee3900 !important; }
+
 .bg-child-primary {
   background-color: #3F51B5 !important; }
 
@@ -5827,7 +6155,7 @@ button.bg-child-gray:focus {
 .bg-white {
   background-color: #fff !important; }
 
-.bg-transparent, .jumbo-widget.jumbotron, .jumbo-widget#maintenance-mode {
+.bg-transparent, #top-menu .navbar, #top-menu .navbar.nav-transparent, .jumbo-widget.jumbotron, .jumbo-widget#maintenance-mode {
   background-color: transparent !important; }
 
 .border, .author-info {
@@ -5839,13 +6167,13 @@ button.bg-child-gray:focus {
 .border-right {
   border-right: 1px solid #dee2e6 !important; }
 
-.border-bottom, .jumbo-widget.jumbotron, .jumbo-widget#maintenance-mode {
+.border-bottom, .jumbo-widget.jumbotron, .jumbo-widget#maintenance-mode, .jumbo-widget-content:after {
   border-bottom: 1px solid #dee2e6 !important; }
 
 .border-left {
   border-left: 1px solid #dee2e6 !important; }
 
-.border-0 {
+.border-0, .jumbo-widget.jumbotron .jumbo-widget-content:after, .jumbo-widget#maintenance-mode .jumbo-widget-content:after {
   border: 0 !important; }
 
 .border-top-0 {
@@ -5899,6 +6227,15 @@ button.bg-child-gray:focus {
 .border-child-indigo {
   border-color: #3F51B5 !important; }
 
+.border-child-green {
+  border-color: #4CAF50 !important; }
+
+.border-child-orange {
+  border-color: #FF9800 !important; }
+
+.border-child-deep-orange {
+  border-color: #FF5722 !important; }
+
 .border-child-primary {
   border-color: #3F51B5 !important; }
 
@@ -5942,7 +6279,7 @@ button.bg-child-gray:focus {
 .rounded-circle {
   border-radius: 50% !important; }
 
-.rounded-0 {
+.rounded-0, #static-header.jumbotron, .jumbo-widget.jumbotron, .jumbo-widget#maintenance-mode {
   border-radius: 0 !important; }
 
 .clearfix::after, article .entry-content::after {
@@ -5971,7 +6308,7 @@ button.bg-child-gray:focus {
 .d-table-cell {
   display: table-cell !important; }
 
-.d-flex, #static-header {
+.d-flex, #static-header, #static-header .hero-footer, .template-jumbotron, #call_action_one {
   display: flex !important; }
 
 .d-inline-flex {
@@ -6167,7 +6504,9 @@ button.bg-child-gray:focus {
 .flex-wrap-reverse {
   flex-wrap: wrap-reverse !important; }
 
-.flex-fill {
+.flex-fill, #static-header .hero-footer .btn, #static-header .hero-footer #commentform .submit, #commentform #static-header .hero-footer .submit, #static-header .hero-footer #comments .comment-reply-link, #comments #static-header .hero-footer .comment-reply-link,
+#static-header .hero-footer #comments #cancel-comment-reply-link,
+#comments #static-header .hero-footer #cancel-comment-reply-link {
   flex: 1 1 auto !important; }
 
 .flex-grow-0 {
@@ -6203,7 +6542,7 @@ button.bg-child-gray:focus {
 .align-items-end {
   align-items: flex-end !important; }
 
-.align-items-center, #static-header {
+.align-items-center, #static-header, .template-jumbotron, #call_action_one {
   align-items: center !important; }
 
 .align-items-baseline {
@@ -6704,10 +7043,10 @@ button.bg-child-gray:focus {
 .position-static {
   position: static !important; }
 
-.position-relative {
+.position-relative, .jumbo-widget-content {
   position: relative !important; }
 
-.position-absolute {
+.position-absolute, .jumbo-widget-content:after {
   position: absolute !important; }
 
 .position-fixed {
@@ -6757,10 +7096,10 @@ button.bg-child-gray:focus {
 .shadow-sm {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important; }
 
-.shadow {
+.shadow, #top-menu .navbar.nav-primary {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; }
 
-.shadow-lg {
+.shadow-lg, #static-header .hero-thumbnail {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; }
 
 .shadow-none {
@@ -6807,7 +7146,7 @@ button.bg-child-gray:focus {
 .mh-100 {
   max-height: 100% !important; }
 
-.m-0, #static-header {
+.m-0, #static-header, #top-menu .navbar-brand {
   margin: 0 !important; }
 
 .mt-0,
@@ -6819,7 +7158,7 @@ button.bg-child-gray:focus {
 .mx-0 {
   margin-right: 0 !important; }
 
-.mb-0,
+.mb-0, #call_action_one,
 .my-0,
 #static-header.hero-header .hero-body {
   margin-bottom: 0 !important; }
@@ -6869,7 +7208,7 @@ button.bg-child-gray:focus {
 .m-3 {
   margin: 1rem !important; }
 
-.mt-3, article,
+.mt-3, article, #call_action_one .call-action-body,
 .my-3,
 #static-header.jumbotron .hero-thumbnail,
 #static-header.jumbotron .hero-body,
@@ -6892,7 +7231,14 @@ article .card-img-overlay #comments #cancel-comment-reply-link,
   margin-top: 1rem !important; }
 
 .mr-3, figure.alignleft, #top-menu .custom-logo-link #site-title, #maintenance-mode #countdowntimer .displaySection,
-.mx-3 {
+.mx-3,
+#static-header .hero-footer .btn,
+#static-header .hero-footer #commentform .submit,
+#commentform #static-header .hero-footer .submit,
+#static-header .hero-footer #comments .comment-reply-link,
+#comments #static-header .hero-footer .comment-reply-link,
+#static-header .hero-footer #comments #cancel-comment-reply-link,
+#comments #static-header .hero-footer #cancel-comment-reply-link {
   margin-right: 1rem !important; }
 
 .mb-3, .gallery .gallery-item, article .featured-post-thumbnail, article .entry-excerpt, article .author-info, article .card, .call-action, #maintenance-mode #countdowntimer,
@@ -6918,7 +7264,14 @@ article .card-img-overlay #comments #cancel-comment-reply-link,
   margin-bottom: 1rem !important; }
 
 .ml-3, figure.alignright,
-.mx-3 {
+.mx-3,
+#static-header .hero-footer .btn,
+#static-header .hero-footer #commentform .submit,
+#commentform #static-header .hero-footer .submit,
+#static-header .hero-footer #comments .comment-reply-link,
+#comments #static-header .hero-footer .comment-reply-link,
+#static-header .hero-footer #comments #cancel-comment-reply-link,
+#comments #static-header .hero-footer #cancel-comment-reply-link {
   margin-left: 1rem !important; }
 
 .m-4 {
@@ -6943,7 +7296,7 @@ article .card-img-overlay #comments #cancel-comment-reply-link,
 .m-5 {
   margin: 3rem !important; }
 
-.mt-5, article .author-info,
+.mt-5, article .author-info, #static-header .hero-footer, .jumbo-widget-footer, #call_action_one .call-action-footer,
 .my-5,
 #maintenance-mode {
   margin-top: 3rem !important; }
@@ -7047,15 +7400,17 @@ article .card-img-overlay #comments #cancel-comment-reply-link,
   padding-top: 1.5rem !important; }
 
 .pr-4,
-.px-4 {
+.px-4,
+.jumbo-widget {
   padding-right: 1.5rem !important; }
 
-.pb-4,
+.pb-4, .jumbo-widget-content,
 .py-4 {
   padding-bottom: 1.5rem !important; }
 
 .pl-4,
-.px-4 {
+.px-4,
+.jumbo-widget {
   padding-left: 1.5rem !important; }
 
 .p-5 {
@@ -7070,7 +7425,7 @@ article .card-img-overlay #comments #cancel-comment-reply-link,
 .px-5 {
   padding-right: 3rem !important; }
 
-.pb-5,
+.pb-5, #call_action_one, #call_action_one .call-action-wrapper,
 .py-5,
 #static-header.hero-header .hero-body {
   padding-bottom: 3rem !important; }
@@ -8110,14 +8465,14 @@ article .card-img-overlay #comments #cancel-comment-reply-link,
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-.text-left, .gallery .gallery-item, #footer #twenty-em-credit {
+.text-left, .gallery .gallery-item, #twenty-em-credit {
   text-align: left !important; }
 
 .text-right, .widget .calendar_wrap #next {
   text-align: right !important; }
 
 .text-center, #site-pagination.prev-next a, #posts-navigation.nav a,
-#comments-navigation.nav a, .site-info, #static-header, .jumbo-widget.jumbotron, .jumbo-widget#maintenance-mode {
+#comments-navigation.nav a, .site-info, #static-header, .jumbo-widget.jumbotron, .jumbo-widget#maintenance-mode, #call_action_one .call-action-wrapper {
   text-align: center !important; }
 
 @media (min-width: 576px) {
@@ -8171,13 +8526,13 @@ article .card-img-overlay #comments #cancel-comment-reply-link,
 .font-weight-normal {
   font-weight: 400 !important; }
 
-.font-weight-bold, #static-header .hero-heading, .jumbo-widget.jumbotron .jumbo-widget-heading, .jumbo-widget#maintenance-mode .jumbo-widget-heading {
+.font-weight-bold, #top-menu .navbar *, #static-header .hero-heading, .jumbo-widget.jumbotron .jumbo-widget-heading, .jumbo-widget#maintenance-mode .jumbo-widget-heading {
   font-weight: 700 !important; }
 
 .font-italic {
   font-style: italic !important; }
 
-.text-white, #maintenance-mode-alert {
+.text-white, #maintenance-mode-alert, #top-menu .navbar * {
   color: #fff !important; }
 
 .text-primary {
@@ -8216,10 +8571,10 @@ a.text-warning:hover, a.text-warning:focus {
 a.text-danger:hover, #commentform a.required:hover, a.text-danger:focus, #commentform a.required:focus {
   color: #bd2130 !important; }
 
-.text-light, #static-header.hero-header .hero-body, .call-action, #maintenance-mode-alert a, #static-header .hero-heading, #static-header .hero-body p {
+.text-light, #static-header.hero-header .hero-body, .call-action, #maintenance-mode-alert a, #static-header .hero-heading, #static-header .hero-body p, #colophon *, .site-info * {
   color: #f8f9fa !important; }
 
-a.text-light:hover, #static-header.hero-header a.hero-body:hover, a.call-action:hover, #maintenance-mode-alert a:hover, #static-header a.hero-heading:hover, a.text-light:focus, #static-header.hero-header a.hero-body:focus, a.call-action:focus, #maintenance-mode-alert a:focus, #static-header a.hero-heading:focus {
+a.text-light:hover, #static-header.hero-header a.hero-body:hover, a.call-action:hover, #maintenance-mode-alert a:hover, #static-header a.hero-heading:hover, #colophon a:hover, .site-info a:hover, a.text-light:focus, #static-header.hero-header a.hero-body:focus, a.call-action:focus, #maintenance-mode-alert a:focus, #static-header a.hero-heading:focus, #colophon a:focus, .site-info a:focus {
   color: #dae0e5 !important; }
 
 .text-dark {
@@ -8246,10 +8601,10 @@ a.text-child-pink:hover, a.text-child-pink:focus {
 a.text-child-purple:hover, a.text-child-purple:focus {
   color: #771e86 !important; }
 
-.text-child-deep-purple {
+.text-child-deep-purple, #top-menu .navbar.nav-primary *, .jumbo-widget-heading [class^="icomoon-"] {
   color: #673AB7 !important; }
 
-a.text-child-deep-purple:hover, a.text-child-deep-purple:focus {
+a.text-child-deep-purple:hover, #top-menu .navbar.nav-primary a:hover, .jumbo-widget-heading a[class^="icomoon-"]:hover, a.text-child-deep-purple:focus, #top-menu .navbar.nav-primary a:focus, .jumbo-widget-heading a[class^="icomoon-"]:focus {
   color: #512e90 !important; }
 
 .text-child-indigo {
@@ -8258,10 +8613,28 @@ a.text-child-deep-purple:hover, a.text-child-deep-purple:focus {
 a.text-child-indigo:hover, a.text-child-indigo:focus {
   color: #32408f !important; }
 
-.text-child-primary, .jumbo-widget-heading [class^="icomoon-"] {
+.text-child-green {
+  color: #4CAF50 !important; }
+
+a.text-child-green:hover, a.text-child-green:focus {
+  color: #3d8b40 !important; }
+
+.text-child-orange {
+  color: #FF9800 !important; }
+
+a.text-child-orange:hover, a.text-child-orange:focus {
+  color: #cc7a00 !important; }
+
+.text-child-deep-orange {
+  color: #FF5722 !important; }
+
+a.text-child-deep-orange:hover, a.text-child-deep-orange:focus {
+  color: #ee3900 !important; }
+
+.text-child-primary {
   color: #3F51B5 !important; }
 
-a.text-child-primary:hover, .jumbo-widget-heading a[class^="icomoon-"]:hover, a.text-child-primary:focus, .jumbo-widget-heading a[class^="icomoon-"]:focus {
+a.text-child-primary:hover, a.text-child-primary:focus {
   color: #32408f !important; }
 
 .text-child-success {
@@ -8362,7 +8735,7 @@ a.text-child-gray:hover, a.text-child-gray:focus {
   body {
     min-width: 992px !important; }
 
-  .container {
+  .container, #call_action_one .call-action-wrapper {
     min-width: 992px !important; }
 
   .navbar {
@@ -9893,14 +10266,16 @@ a .featured-post-thumbnail:hover, a .featured-post-thumbnail:focus {
   width: 11.11%; }
 
 #header #header-image .container-fluid img,
-#header #header-image .container img {
+#header #header-image .container img,
+#header #header-image #call_action_one .call-action-wrapper img,
+#call_action_one #header #header-image .call-action-wrapper img {
   width: 100%;
   height: auto; }
 
 @media (min-width: 992px) {
-  #static-header.static-header-text-left .container .row > div:first-child {
+  #static-header.static-header-text-left .container .row > div:first-child, #static-header.static-header-text-left #call_action_one .call-action-wrapper .row > div:first-child, #call_action_one #static-header.static-header-text-left .call-action-wrapper .row > div:first-child {
     order: 12; }
-  #static-header.static-header-text-left .container .row > div:last-child {
+  #static-header.static-header-text-left .container .row > div:last-child, #static-header.static-header-text-left #call_action_one .call-action-wrapper .row > div:last-child, #call_action_one #static-header.static-header-text-left .call-action-wrapper .row > div:last-child {
     order: 1; } }
 #static-header.hero-header {
   background-repeat: no-repeat;
@@ -9992,11 +10367,44 @@ article.sticky {
 body {
   font-size: 20px; }
 
+#site-title {
+  font-size: inherit !important; }
+
 .admin-bar #top-menu {
   top: 30px; }
+#top-menu .navbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+  #top-menu .navbar * {
+    font-family: inherit; }
+  #top-menu .navbar.nav-transparent {
+    transition: 500ms; }
+  #top-menu .navbar.nav-primary {
+    transition: 250ms;
+    background-color: rgba(255, 255, 255, 0.9) !important; }
 
 #static-header {
-  background-image: linear-gradient(45deg, #2196F3, #3F51B5);
+  background-image: linear-gradient(45deg, #673AB7, #3F51B5);
+  background-repeat: repeat-x;
+  min-height: 100vh; }
+
+.template-jumbotron {
+  min-height: 100vh; }
+
+.jumbo-widget-content:after {
+  content: "";
+  left: 0;
+  right: 75%;
+  bottom: 0; }
+
+#call_action_one {
+  min-height: 50vh;
+  background-image: linear-gradient(45deg, #673AB7, #3F51B5);
   background-repeat: repeat-x; }
+
+#colophon {
+  background-color: #212529; }
+
+.site-info {
+  background-color: #292d32; }
 
 /*# sourceMappingURL=theme.css.map */
