@@ -77,6 +77,26 @@ jQuery(document).ready(function($) {
 	}
 	twizrAppVersion();
 
+	/** Go to top */
+	var gotoTop = $('#gototop');
+	$(window).scroll(function(){
+		if ($('body,html').scrollTop() > Number(450)){
+			$(gotoTop).fadeIn();
+		}else{
+			$(gotoTop).fadeOut();
+		}
+	});
+
+	/** ScrollTo */
+	$('.scroll-to').click(function(e){
+		e.preventDefault();
+		var element = $(this),
+			target = element.attr('data-target');
+		$(window).scrollTo(target,{
+			duration: 500,
+		});
+	});
+
 	// Add id attr in single entries and anchor'em
 	$(function(){
 		$('article .entry-content > h1, article .entry-content > h2, article .entry-content > h3, article .entry-content > h4, article .entry-content > h5, article .entry-content > h6').each(function(index){

@@ -61,6 +61,22 @@ body{
 		}
 	}
 }
+#gototop{
+	@extend .position-fixed;
+	@extend .text-white;
+	@extend .shadow-sm;
+	display: none;
+	top: auto;
+	left: auto;
+	right: 30px;
+	bottom: 30px;
+	background-color: rgba($gray-900,.3);
+	cursor: pointer;
+	&:hover,
+	&:focus{
+		background-color: rgba( $child-primary, .7);
+	}
+}
 
 //
 // Header
