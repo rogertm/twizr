@@ -5,6 +5,7 @@
 //
 @import "custom";
 @import "../../twenty-em/scss/theme";
+@import "callout";
 
 //
 // Scaffolding
@@ -124,8 +125,6 @@ body{
 .template-jumbotron{
 	min-height: 100vh;
 	@extend .mb-5;
-	@extend .d-flex;
-	@extend .align-items-center;
 }
 .jumbo-widget{
 	@extend .px-4;

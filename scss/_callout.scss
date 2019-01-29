@@ -1,0 +1,53 @@
+// Twizr Callouts variant
+
+//
+// Base style
+//
+.child-callout{
+	@extend .alert;
+	@extend .mt-4;
+	@extend .mb-5;
+}
+.child-callout-heading{
+	@extend .alert-heading;
+}
+.child-callout-dismissible{
+	@extend .alert-dismissible;
+}
+.child-callout-link{
+	@extend .alert-link;
+}
+
+//
+// Mixin
+//
+@mixin child-callout-variant($background, $border, $color) {
+	color: darken( $color, 15% );
+	background-color: lighten( $background, 45% );
+	border:{
+		color: darken( $border, 15% );
+		width: 0 0 0 .25rem;
+		style: solid;
+		radius: 0;
+	}
+
+	hr {
+		border-top-color: darken($border, 5%);
+	}
+
+	.child-callout-link, a {
+		color: darken($color, 10%);
+		border-bottom: dotted 1px;
+	}
+}
+
+
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the callout.
+
+@each $color, $value in $theme-colors {
+	.child-callout-#{$color} {
+		@include child-callout-variant(theme-color-level($color, 1), theme-color-level($color, 1), theme-color-level($color, 0));
+	}
+}
