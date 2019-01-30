@@ -11,11 +11,15 @@
 //
 // Scaffolding
 //
+*:hover{
+	transition: 250ms;
+}
 body{
 	font:{
 		size: 20px;
 	}
 	color: $body-color;
+	cursor: default;
 }
 #main{
 	body:not(.home) &{
@@ -261,6 +265,104 @@ body:not(.home){
 	}
 	.single &-meta{
 		@extend .mt-3;
+	}
+	&-content{
+		@extend .mb-5;
+		h1, h2, h3,
+		.h1, .h2, .h3{
+			@extend .mt-4;
+			@extend .mb-2;
+		}
+		.h-anchor{
+			div{
+				.anchor{
+					margin-left: -1.5rem;
+					margin-right: .75rem;
+					@extend .text-muted;
+					opacity: 0;
+					font-size: $font-size-lg;
+					&:before{
+						content: attr(data-anchorjs-icon);
+					}
+				}
+				&:hover,
+				&:focus{
+					.anchor{
+						opacity: 1;
+					}
+				}
+			}
+			&:before{
+				content: "";
+				display: block;
+				margin-top: -4rem;
+				height: 4rem;
+				visibility: hidden;
+			}
+		}
+	}
+}
+article{
+	pre{
+	-moz-tab-size: 2;
+	  -o-tab-size: 2;
+	     tab-size: 2;
+		@extend .bg-light;
+		@extend .pt-3;
+		@extend .mt-3;
+		&:before{
+			background: $green;
+			@extend .text-light;
+			font-weight: bold;
+			content: attr(rel);
+			display: block;
+			margin: -$spacer 0;
+			padding: 10px 10px;
+			text-transform: uppercase;
+			position: absolute;
+			left: $spacer;
+			right: $spacer;
+			width: auto;
+		}
+		&.prettyprint{
+			.com { color: #93a1a1; }
+			.lit { color: #195f91; }
+			.opn, .clo { color: #93a1a1; }
+			.pun { color: #3a4a64; }
+			.fun { color: #dc322f; }
+			.str, .atv { color: #c03030; }
+			.kwd { color: #1e347b; }
+			.tag { color: #3b5bb5; }
+			.typ, .atn, .dec, .var { color: teal; }
+			.pln { color: #48484c; }
+			&.linenums{
+				ol.linenums {
+					box-shadow: 40px 0px 0px #fbfbfb inset, 41px 0px 0px #ececf0 inset;
+					@extend .py-4;
+					@extend .mt-4;
+					@extend .mb-0;
+					li{
+						@extend .px-3;
+						color: #bebec5;
+						&:hover,
+						&:active
+						&:focus{
+							color: $body-color;
+							background-color: #fbfbfb;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.breadcrumb{
+	@extend .bg-transparent;
+	@extend .small;
+	&-item{
+		&.active{
+			color: $gray-600;
+		}
 	}
 }
 

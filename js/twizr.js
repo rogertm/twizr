@@ -97,6 +97,29 @@ jQuery(document).ready(function($) {
 		});
 	});
 
+	// Make code pretty
+	$(function(){
+		var $window = $(window)
+		window.prettyPrint && prettyPrint()
+	});
+	$('.prettyprint').addClass('linenums');
+	$('.prettyprint.nolinenums').removeClass('linenums');
+
+
+	// Move title attr to rel attr
+	$(function(){
+		$('pre').each(function(index){
+			var $pre	= $(this);
+			var $title	= ( $pre.prop('title') ) ? $pre.prop('title') : 'code';
+			$pre.attr({
+				'rel':$title
+			});
+			$pre.removeAttr('title');
+		});
+	});
+
+	$('.comment-body pre').wrapInner('<code></code>');
+
 	// Add id attr in single entries and anchor'em
 	$(function(){
 		$('article .entry-content > h1, article .entry-content > h2, article .entry-content > h3, article .entry-content > h4, article .entry-content > h5, article .entry-content > h6').each(function(index){

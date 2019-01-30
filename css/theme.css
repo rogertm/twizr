@@ -374,6 +374,7 @@ small,
 .small,
 #maintenance-mode #countdowntimer .periodDisplay,
 #top-menu .navbar-nav,
+.breadcrumb,
 .site-info {
   font-size: 80%;
   font-weight: 400; }
@@ -6054,7 +6055,7 @@ button.bg-danger:hover,
 button.bg-danger:focus {
   background-color: #bd2130 !important; }
 
-.bg-light {
+.bg-light, article pre {
   background-color: #f8f9fa !important; }
 
 a.bg-light:hover, a.bg-light:focus,
@@ -6187,7 +6188,7 @@ button.bg-child-gray:focus {
 .bg-white {
   background-color: #fff !important; }
 
-.bg-transparent, .home #top-menu .navbar, .home #top-menu .navbar.nav-transparent, .jumbo-widget.jumbotron, .jumbo-widget#maintenance-mode, .card-doc .card-header, .card-tour .card-header {
+.bg-transparent, .home #top-menu .navbar, .home #top-menu .navbar.nav-transparent, .jumbo-widget.jumbotron, .jumbo-widget#maintenance-mode, .breadcrumb, .card-doc .card-header, .card-tour .card-header {
   background-color: transparent !important; }
 
 .border, .author-info {
@@ -7190,7 +7191,7 @@ button.bg-child-gray:focus {
 .mx-0 {
   margin-right: 0 !important; }
 
-.mb-0, #call_action_one,
+.mb-0, #call_action_one, article pre.prettyprint.linenums ol.linenums,
 .my-0,
 #static-header.hero-header .hero-body {
   margin-bottom: 0 !important; }
@@ -7229,7 +7230,13 @@ button.bg-child-gray:focus {
 .mx-2 {
   margin-right: 0.5rem !important; }
 
-.mb-2, .widget ul li, .widget ol li,
+.mb-2, .widget ul li, .widget ol li, .entry-content h1, .entry-content h2, .entry-content h3,
+.entry-content .h1,
+.entry-content #site-title,
+.entry-content #top-menu .navbar-brand,
+#top-menu .entry-content .navbar-brand,
+.entry-content .jumbo-widget-heading [class^="icomoon-"],
+.jumbo-widget-heading .entry-content [class^="icomoon-"], .entry-content .h2, .entry-content .h3, .entry-content .jumbo-widget.jumbotron .jumbo-widget-content p, .jumbo-widget.jumbotron .jumbo-widget-content .entry-content p, .entry-content .jumbo-widget#maintenance-mode .jumbo-widget-content p, .jumbo-widget#maintenance-mode .jumbo-widget-content .entry-content p,
 .my-2 {
   margin-bottom: 0.5rem !important; }
 
@@ -7240,7 +7247,7 @@ button.bg-child-gray:focus {
 .m-3 {
   margin: 1rem !important; }
 
-.mt-3, article, #call_action_one .call-action-body, .single .entry-meta,
+.mt-3, article, #call_action_one .call-action-body, .single .entry-meta, article pre,
 .my-3,
 #static-header.jumbotron .hero-thumbnail,
 #static-header.jumbotron .hero-body,
@@ -7309,7 +7316,13 @@ article .card-img-overlay #comments #cancel-comment-reply-link,
 .m-4 {
   margin: 1.5rem !important; }
 
-.mt-4, .child-callout,
+.mt-4, .child-callout, .entry-content h1, .entry-content h2, .entry-content h3,
+.entry-content .h1,
+.entry-content #site-title,
+.entry-content #top-menu .navbar-brand,
+#top-menu .entry-content .navbar-brand,
+.entry-content .jumbo-widget-heading [class^="icomoon-"],
+.jumbo-widget-heading .entry-content [class^="icomoon-"], .entry-content .h2, .entry-content .h3, .entry-content .jumbo-widget.jumbotron .jumbo-widget-content p, .jumbo-widget.jumbotron .jumbo-widget-content .entry-content p, .entry-content .jumbo-widget#maintenance-mode .jumbo-widget-content p, .jumbo-widget#maintenance-mode .jumbo-widget-content .entry-content p, article pre.prettyprint.linenums ol.linenums,
 .my-4 {
   margin-top: 1.5rem !important; }
 
@@ -7337,7 +7350,7 @@ article .card-img-overlay #comments #cancel-comment-reply-link,
 .mx-5 {
   margin-right: 3rem !important; }
 
-.mb-5, article, .author-info, .widget, .child-callout, .template-jumbotron,
+.mb-5, article, .author-info, .widget, .child-callout, .template-jumbotron, .entry-content,
 .my-5,
 #maintenance-mode {
   margin-bottom: 3rem !important; }
@@ -7414,13 +7427,14 @@ article .card-img-overlay #comments #cancel-comment-reply-link,
 .p-3, .author-info, .call-action {
   padding: 1rem !important; }
 
-.pt-3,
+.pt-3, article pre,
 .py-3,
 #comments li {
   padding-top: 1rem !important; }
 
 .pr-3, .gallery .gallery-item,
-.px-3 {
+.px-3,
+article pre.prettyprint.linenums ol.linenums li {
   padding-right: 1rem !important; }
 
 .pb-3,
@@ -7429,14 +7443,16 @@ article .card-img-overlay #comments #cancel-comment-reply-link,
   padding-bottom: 1rem !important; }
 
 .pl-3,
-.px-3 {
+.px-3,
+article pre.prettyprint.linenums ol.linenums li {
   padding-left: 1rem !important; }
 
 .p-4 {
   padding: 1.5rem !important; }
 
 .pt-4,
-.py-4 {
+.py-4,
+article pre.prettyprint.linenums ol.linenums {
   padding-top: 1.5rem !important; }
 
 .pr-4,
@@ -7445,7 +7461,8 @@ article .card-img-overlay #comments #cancel-comment-reply-link,
   padding-right: 1.5rem !important; }
 
 .pb-4, .jumbo-widget-content,
-.py-4 {
+.py-4,
+article pre.prettyprint.linenums ol.linenums {
   padding-bottom: 1.5rem !important; }
 
 .pl-4,
@@ -8613,7 +8630,7 @@ a.text-warning:hover, a.text-warning:focus {
 a.text-danger:hover, #commentform a.required:hover, a.text-danger:focus, #commentform a.required:focus {
   color: #bd2130 !important; }
 
-.text-light, #static-header.hero-header .hero-body, .call-action, #maintenance-mode-alert a, #static-header .hero-heading, #static-header .hero-body p, #colophon *, .site-info * {
+.text-light, #static-header.hero-header .hero-body, .call-action, #maintenance-mode-alert a, #static-header .hero-heading, #static-header .hero-body p, article pre:before, #colophon *, .site-info * {
   color: #f8f9fa !important; }
 
 a.text-light:hover, #static-header.hero-header a.hero-body:hover, a.call-action:hover, #maintenance-mode-alert a:hover, #static-header a.hero-heading:hover, #colophon a:hover, .site-info a:hover, a.text-light:focus, #static-header.hero-header a.hero-body:focus, a.call-action:focus, #maintenance-mode-alert a:focus, #static-header a.hero-heading:focus, #colophon a:focus, .site-info a:focus {
@@ -8712,7 +8729,7 @@ a.text-child-gray:hover, a.text-child-gray:focus {
 .text-body {
   color: #212529 !important; }
 
-.text-muted {
+.text-muted, .entry-content .h-anchor div .anchor {
   color: #6c757d !important; }
 
 .text-black-50 {
@@ -10692,9 +10709,13 @@ article.sticky {
     color: #858585;
     border-bottom: dotted 1px; }
 
+*:hover {
+  transition: 250ms; }
+
 body {
   font-size: 20px;
-  color: #495057; }
+  color: #495057;
+  cursor: default; }
 
 body:not(.home) #main {
   margin-top: 10rem !important; }
@@ -10750,6 +10771,70 @@ body:not(.home) #top-menu .navbar {
   min-height: 50vh;
   background-image: linear-gradient(45deg, #673AB7, #3F51B5);
   background-repeat: repeat-x; }
+
+.entry-content .h-anchor div .anchor {
+  margin-left: -1.5rem;
+  margin-right: .75rem;
+  opacity: 0;
+  font-size: 1.25rem; }
+  .entry-content .h-anchor div .anchor:before {
+    content: attr(data-anchorjs-icon); }
+.entry-content .h-anchor div:hover .anchor, .entry-content .h-anchor div:focus .anchor {
+  opacity: 1; }
+.entry-content .h-anchor:before {
+  content: "";
+  display: block;
+  margin-top: -4rem;
+  height: 4rem;
+  visibility: hidden; }
+
+article pre {
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2; }
+  article pre:before {
+    background: #28a745;
+    font-weight: bold;
+    content: attr(rel);
+    display: block;
+    margin: -1rem 0;
+    padding: 10px 10px;
+    text-transform: uppercase;
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    width: auto; }
+  article pre.prettyprint .com {
+    color: #93a1a1; }
+  article pre.prettyprint .lit {
+    color: #195f91; }
+  article pre.prettyprint .opn, article pre.prettyprint .clo {
+    color: #93a1a1; }
+  article pre.prettyprint .pun {
+    color: #3a4a64; }
+  article pre.prettyprint .fun {
+    color: #dc322f; }
+  article pre.prettyprint .str, article pre.prettyprint .atv {
+    color: #c03030; }
+  article pre.prettyprint .kwd {
+    color: #1e347b; }
+  article pre.prettyprint .tag {
+    color: #3b5bb5; }
+  article pre.prettyprint .typ, article pre.prettyprint .atn, article pre.prettyprint .dec, article pre.prettyprint .var {
+    color: teal; }
+  article pre.prettyprint .pln {
+    color: #48484c; }
+  article pre.prettyprint.linenums ol.linenums {
+    box-shadow: 40px 0px 0px #fbfbfb inset, 41px 0px 0px #ececf0 inset; }
+    article pre.prettyprint.linenums ol.linenums li {
+      color: #bebec5; }
+      article pre.prettyprint.linenums ol.linenums li:hover, article pre.prettyprint.linenums ol.linenums li:active
+      article pre.prettyprint.linenums ol.linenums li:focus {
+        color: #495057;
+        background-color: #fbfbfb; }
+
+.breadcrumb-item.active {
+  color: #6c757d; }
 
 #colophon {
   background-color: #212529; }

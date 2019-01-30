@@ -22,6 +22,9 @@ function twizr_enqueue(){
 	wp_register_script( 'jquery.scrollTo', t_em_get_js( 'jquery.scrollTo', T_EM_CHILD_THEME_DIR_PATH .'/node_modules/jquery.scrollto', T_EM_CHILD_THEME_DIR_URL .'/node_modules/jquery.scrollto' ), array( 'jquery' ), t_em_theme( 'Version' ), true );
 	wp_enqueue_script( 'jquery.scrollTo' );
 
+	wp_register_script( 'prettify', t_em_get_js( 'prettify', T_EM_CHILD_THEME_DIR_PATH .'/js', T_EM_CHILD_THEME_DIR_URL .'/js' ), array( 'jquery' ), t_em_theme( 'Version' ), true );
+	wp_enqueue_script( 'prettify' );
+
 	wp_register_script( 'twizr-js', t_em_get_js( 'twizr', T_EM_CHILD_THEME_DIR_PATH .'/js', T_EM_CHILD_THEME_DIR_URL .'/js' ), array( 'jquery' ), t_em_theme( 'Version' ), true );
 	// l10n for twizr.js
 	$translation = array(
