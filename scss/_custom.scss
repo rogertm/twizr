@@ -11,6 +11,7 @@ $container-max-widths: (
 // Fonts
 $font-family-sans-serif:	"Lato", Helvetica, Arial, sans-serif;
 $heading-font-family:		"Roboto Condensed", Helvetica, Arial, sans-serif;
+$headings-font-weight:		300;
 
 // Colors
 $child-red:					#F44336 !default;
@@ -46,5 +47,8 @@ $theme-colors: (
 );
 
 // Links
-$link-color:				$child-primary;
+$link-color:				$child-deep-purple;
 $link-hover-decoration:		none;
+
+// Components
+$component-active-bg:		$child-deep-purple;

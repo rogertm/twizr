@@ -5,6 +5,7 @@
 //
 @import "custom";
 @import "../../twenty-em/scss/theme";
+@import "init";
 @import "callout";
 
 //
@@ -14,13 +15,27 @@ body{
 	font:{
 		size: 20px;
 	}
+	color: $body-color;
+}
+#main{
+	body:not(.home) &{
+		margin-top: 10rem !important;
+	}
+}
+h1, h2, h3, h4, h5, h6{
+	code{
+		color: $body-color;
+	}
 }
 
 //
 // Brand
 //
 #site-title{
-	font-size: inherit !important;
+	@extend .h1;
+}
+.branding{
+	font-family: $heading-font-family;
 }
 
 //
@@ -32,16 +47,18 @@ body{
 	}
 	@extend .fixed-top;
 	.navbar{
-		@extend .bg-transparent;
-		border-bottom: 1px solid rgba( $white, .3 );
-		*{
-			@extend .font-weight-bold;
-			@extend .text-white;
-			font-family: $headings-font-family;
-		}
-		&.nav-transparent{
-			transition: 500ms;
+		.home &{
 			@extend .bg-transparent;
+			border-bottom: 1px solid rgba( $white, .3 );
+			*{
+				@extend .font-weight-bold;
+				@extend .text-white;
+				font-family: $headings-font-family;
+			}
+			&.nav-transparent{
+				transition: 500ms;
+				@extend .bg-transparent;
+			}
 		}
 		&.nav-primary{
 			transition: 250ms;
@@ -59,6 +76,20 @@ body{
 		&-brand{
 			@extend .h1;
 			@extend .m-0;
+		}
+	}
+}
+body:not(.home){
+	#top-menu{
+		.navbar{
+			transition: 250ms;
+			background-color: rgba( $white, .9 ) !important;
+			@extend .navbar-light;
+			@extend .shadow;
+			*{
+				@extend .text-child-deep-purple;
+				@extend .font-weight-bold;
+			}
 		}
 	}
 }
@@ -138,6 +169,7 @@ body{
 		.jumbo-widget-heading{
 			@extend .display-1;
 			@extend .font-weight-bold;
+			@extend .text-child-deep-purple;
 		}
 		.jumbo-widget-content{
 			p{
@@ -217,9 +249,47 @@ body{
 //
 // Content
 //
+#main-content{
+	body:not(.home) &{
+		@extend .col-xl-10;
+		@extend .mx-auto;
+	}
+}
 .entry{
 	&-title{
 		@extend .display-4;
+	}
+	.single &-meta{
+		@extend .mt-3;
+	}
+}
+
+//
+// Forms
+//
+#commentform{
+	#submit{
+		@extend .btn-child-primary;
+	}
+}
+
+//
+// Cards
+//
+.card{
+	&-doc,
+	&-tour{
+		@extend .border-light;
+		.card{
+			&-header{
+				@extend .h4;
+				@extend .bg-transparent;
+				@extend .px-0;
+			}
+			&-body{
+				@extend .px-0;
+			}
+		}
 	}
 }
 

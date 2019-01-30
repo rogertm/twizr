@@ -3,7 +3,7 @@
  * Twizr
  *
  * @package			WordPress
- * @subpackage		Twizr
+ * @subpackage		Twizr: Docs search results
  * @author			RogerTM
  * @license			license.txt
  * @link			https://themingisprose.com/twenty-em
@@ -35,7 +35,6 @@ get_header(); ?>
 				<?php t_em_loop(); ?>
 				<?php do_action( 't_em_action_content_after' ); ?>
 			</section><!-- #content -->
-			<?php get_sidebar( 'docs' ); ?>
 			<?php get_sidebar( 'alt' ); ?>
 		</section><!-- #main-content -->
 

@@ -11,7 +11,7 @@
 jQuery(document).ready(function($) {
 	// Top Menu
 	function twizrTopMenu(){
-		var menu = $('#top-menu .navbar')
+		var menu = $('.home #top-menu .navbar')
 			h 	 = $('#top-menu').outerHeight();
 		$(window).scroll(function(){
 			if ($('body,html').scrollTop() > Number(h)){
